@@ -1,0 +1,172 @@
+{
+  "products": [
+    {
+      "category": "lips",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/1_6f55bcac-3e42-4253-88ee-cec0fa43c62a.jpg?v=1645608270",
+      "name": "Matte Attack Transferproof Lipstick",
+      "price": 699.0,
+      "star": 4.7,
+      "likes": 438,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/1_bf17a76c-096c-47c4-ab6a-113c04b43213.jpg?v=1644593898",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/9_902c5332-5eb6-4cb1-a307-8f119000efb5.jpg?v=1656997135",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/10_dc9e9781-b84a-4155-847f-4351bf8c8152.jpg?v=1656997135",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/8_63934622-784d-4e2b-b4b4-0d32c9440dc2.jpg?v=1656997135"
+      }
+    },
+    {
+      "category": "lips",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-tipsy-lips-moisturizing-balm-01-mojito-15057279877203.jpg?v=1619122412",
+      "name": "Tipsy Lips Moisturizing Balm",
+      "price": 199.0,
+      "star": 4.8,
+      "likes": 317,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-tipsy-lips-moisturizing-balm-01-mojito-15045400526931.jpg?v=1619122351",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-tipsy-lips-moisturizing-balm-01-mojito-15057269620819.jpg?v=1619122353",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-tipsy-lips-moisturizing-balm-01-mojito-15057269620819.jpg?v=1619122353",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-tipsy-lips-moisturizing-balm-01-mojito-15045400625235.jpg?v=1619122356"
+      }
+    },
+    {
+      "category": "lips",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-matte-as-hell-crayon-lipstick-minis-set-28270316945491.jpg?v=1623073051",
+      "name": "Matte As Hell Crayon Lipstick Minis Set",
+      "price": 1099.0,
+      "star": 4.9,
+      "likes": 281,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-matte-as-hell-crayon-lipstick-minis-set-28270316945491.jpg?v=1623073051",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-matte-as-hell-crayon-lipstick-minis-set-28270316978259.jpg?v=1623073053",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-matte-as-hell-crayon-lipstick-minis-set-28270317109331.jpg?v=1623073054",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-matte-as-hell-crayon-lipstick-minis-set-28321893089363.jpg?v=1623073058"
+      }
+    },
+    {
+      "category": "lips",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/1_ef579f2e-602e-4d2f-bed2-bf0efdf4f184.jpg?v=1644325813",
+      "name": "Smudge Me Not Liquid Lipstick",
+      "price": 499.0,
+      "star": 4.8,
+      "likes": 353,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-smudge-me-not-liquid-lipstick-01-brazen-raisin-burgundy-28190640013395.jpg?v=1619100870",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-smudge-me-not-liquid-lipstick-01-brazen-raisin-burgundy-28190641127507.jpg?v=1619100872",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-smudge-me-not-liquid-lipstick-01-brazen-raisin-burgundy-28190641094739.jpg?v=1619100874",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-smudge-me-not-liquid-lipstick-01-brazen-raisin-burgundy-28190641258579.jpg?v=1619100876"
+      }
+    },
+    {
+      "category": "face",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-blush-01-peach-peak-soft-peach-pink-11020203884627.jpg?v=1619102626",
+      "name": "Contour De Force Mini Blush",
+      "price": 349.0,
+      "star": 4.8,
+      "likes": 148,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-blush-01-peach-peak-soft-peach-pink-14330494419027.jpg?v=1619102642",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-blush-01-peach-peak-soft-peach-pink-14401372192851.jpg?v=1619102645",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-blush-01-peach-peak-soft-peach-pink-12785043210323.jpg?v=1619102648",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-blush-01-peach-peak-soft-peach-pink-12785043243091.jpg?v=1619102650"
+      }
+    },
+    {
+      "category": "face",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/1_51afaa84-af89-42b5-bdb8-a51b01257bc0.jpg?v=1639582607",
+      "name": "Contour De Force Face Palette",
+      "price": 799.0,
+      "star": 4.7,
+      "likes": 322,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/1_c36c9186-d377-4704-bd67-1a18d6e8541c.jpg?v=1639582576",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/6_832236c1-6949-4810-b015-0b366cc48f59.jpg?v=1657012482",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/7_be65a9a7-273a-4bcb-ab66-62e35a6dbbde.jpg?v=1657012482",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/2_60191659-02b6-4ae9-9b45-5cc613817dfc.jpg?v=1657012482"
+      }
+    },
+    {
+      "category": "face",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-bronzer-01-taupe-topper-cool-toned-brown-gray-undertone-11020228624467.jpg?v=1619102678",
+      "name": "Contour De Force Mini Bronzer",
+      "price": 399.0,
+      "star": 4.7,
+      "likes": 73,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-bronzer-01-taupe-topper-brown-gray-14376772272211.jpg?v=1619102690",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-bronzer-01-taupe-topper-brown-gray-14330497237075.jpg?v=1619102692",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-bronzer-01-taupe-topper-brown-gray-12785064443987.jpg?v=1619102695",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-bronzer-01-taupe-topper-brown-gray-12785063854163.jpg?v=1619102697"
+      }
+    },
+    {
+      "category": "face",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-bling-leader-illuminating-moisturizer-13644982681683.jpg?v=1619115847",
+      "name": "Bling Leader Illuminating Moisturizer",
+      "price": 699.0,
+      "star": 4.7,
+      "likes": 143,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-bling-leader-illuminating-moisturizer-01-gold-diggin-warm-gold-with-a-pearl-finish-13644788006995.jpg?v=1619115785",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-bling-leader-illuminating-moisturizer-01-gold-diggin-warm-gold-with-a-pearl-finish-14270754291795.jpg?v=1619115788",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-bling-leader-illuminating-moisturizer-01-gold-diggin-warm-gold-with-a-pearl-finish-13644788039763.jpg?v=1619115790",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-bling-leader-illuminating-moisturizer-01-gold-diggin-warm-gold-with-a-pearl-finish-13644788039763.jpg?v=1619115790"
+      }
+    },
+    {
+      "category": "eyes",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
+      "name": "Kohl Of Honour Intense Kajal - 01 Black Out (Black)",
+      "price": 249.0,
+      "star": 4.8,
+      "likes": 199,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/06_5bb960b6-95c6-45a3-9c5a-2994e73cf97b.jpg?v=1656993401",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/07_ba2ccb0f-25e9-4bac-9ac1-e44d298eeae0.jpg?v=1656993401",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/03_77306ce9-1584-4967-a77d-8c55ef549bb3.jpg?v=1656993401",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/03_77306ce9-1584-4967-a77d-8c55ef549bb3.jpg?v=1656993401"
+      }
+    },
+    {
+      "category": "eyes",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/1_30afa1e4-ceba-4cf0-bf6f-d6e6af88d7af.jpg?v=1634053475",
+      "name": "Eye Love Jelly Eyeshadow",
+      "price": 299.0,
+      "star": 4.9,
+      "likes": 15,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/SugarEyeLoveJellyEyeshadow-PoweredbyImages2_992ae8de-47ba-461b-a400-4d93c8c0997e.jpg?v=1634034246",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/2_de61424f-8669-4147-b421-ca486081e644.jpg?v=1634034246",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/3_78c2526e-edcb-4de0-ab5b-584abe317ef2.jpg?v=1634034246",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/3_78c2526e-edcb-4de0-ab5b-584abe317ef2.jpg?v=1634034246"
+      }
+    },
+    {
+      "category": "eyes",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/1_6_450a8655-59a5-41d8-9fca-5dd95d128534.jpg?v=1658418866",
+      "name": "Eye Warned You So! Double Matte Eyeliner",
+      "price": 699.0,
+      "star": 4.8,
+      "likes": 58,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-warned-you-so-double-matte-eyeliner-01-black-swan-black-12771272261715.jpg?v=1658395727",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-warned-you-so-double-matte-eyeliner-01-black-swan-black-12771271999571.jpg?v=1658395771",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/5_2.jpg?v=1658495517",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-warned-you-so-double-matte-eyeliner-01-black-swan-black-12771272097875.jpg?v=1658395771"
+      }
+    },
+    {
+      "category": "eyes",
+      "img_url": "https://cdn.shopify.com/s/files/1/0906/2558/products/01_59809bd6-49ef-4c6b-b262-47002bedc963.jpg?v=1639755559",
+      "name": "Blend The Rules Eyeshadow Palette",
+      "price": 1199.0,
+      "star": 4.8,
+      "likes": 97,
+      "description_image_urls": {
+        "a": "https://cdn.shopify.com/s/files/1/0906/2558/products/01_0fa12791-2d87-4386-9633-fe0dea75cf8f.jpg?v=1639755487",
+        "b": "https://cdn.shopify.com/s/files/1/0906/2558/products/04_b5dd64a4-b837-4ae6-8f48-1e5d7373784b.jpg?v=1655889958",
+        "c": "https://cdn.shopify.com/s/files/1/0906/2558/products/06_1ccfa44e-3512-4c27-a61b-87c36d49ed12.jpg?v=1655889958",
+        "d": "https://cdn.shopify.com/s/files/1/0906/2558/products/06_1ccfa44e-3512-4c27-a61b-87c36d49ed12.jpg?v=1655889958"
+      }
+    }
+  ]
+}
