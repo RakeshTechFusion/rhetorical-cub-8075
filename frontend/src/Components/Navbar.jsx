@@ -226,7 +226,7 @@ export const Navbar = () => {
             </Button>
           </InputRightElement>
         </InputGroup>
-        <Button>
+        <Button variant={'link'} color={'black'}>
           <Box mr={2}>
             <FaUserAlt size={'18'} />
           </Box>
@@ -255,9 +255,6 @@ export const Navbar = () => {
                 <PopoverContent w={''} fontSize={''}>
                   {e.onHover.map((el, j) => {
                     return (
-                      // <Button key={j} fontSize={'13'} variant={'ghost'}>
-                      //   {el.name}
-                      // </Button>
                       <Popover key={j} placement='auto-end'>
                         <PopoverTrigger>
                           <Button variant={'ghost'}>{el.name}</Button>
