@@ -15,6 +15,7 @@
 .banner>img{
     width: 85%;
     height: 100%;
+    
 }
 #mapData {
     margin-left: 3rem;
@@ -58,6 +59,7 @@
 #prodDataImage {
     width: 12rem;
     margin: auto;
+    border: 1px solid red; 
 }
 
 #mapDataStar {
