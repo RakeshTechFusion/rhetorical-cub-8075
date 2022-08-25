@@ -4,10 +4,10 @@ import { MdDelete } from "react-icons/md";
 
 export const Cart = () => {
   return (
-    <VStack w="100%" mt="1.5rem" mr="1rem" ml="1rem" borderRadius="20px" boxShadow='md'>
+    <VStack w="100%" mt="1.5rem" mr="1rem" ml="1rem" borderRadius="20px" boxShadow='md' backgroundColor="#fff" >
       <Flex w="100%" direction={["column","column","row"]}>
-        <Flex w={["100%","100%","50%"]} direction="column" border="1px solid red" ml="1rem" mr="1rem">
-            <Flex w="100%" mt="1rem" fontSize="14px" color="#575555" border="1px solid green" justifyContent="space-between">
+        <Flex w={["100%","100%","50%"]} direction="column"  ml="1rem" mr="1rem">
+            <Flex w="100%" mt="1rem" fontSize="14px" color="#575555"  justifyContent="space-between">
                 <Flex gap="10px"> 
                     <Box>
                         <Image src='https://in.sugarcosmetics.com/desc-images/shopping_cart.svg' alt='' w="20px"/>
@@ -16,7 +16,7 @@ export const Cart = () => {
                 </Flex>
                 <Box textDecoration="underline">Cart Total : Rs. 2796.00</Box>
             </Flex>
-            <Flex mt="0.5rem" border="1px solid red" w="100%">
+            <Flex mt="0.5rem"  w="100%">
                 <Box backgroundColor="rgb(250,249,249)" h="110px" w="100%">
                     <Flex p="0.5rem" w="100%"> 
                         <Flex h="100px" w="60%" >
@@ -43,7 +43,7 @@ export const Cart = () => {
                     </Flex>
                 </Box>
             </Flex>
-            <Flex mt="0.5rem" border="1px solid red" w="100%">
+            <Flex mt="0.5rem"  w="100%">
                 <Box backgroundColor="rgb(250,249,249)" h="110px" w="100%">
                     <Flex p="0.5rem" w="100%"> 
                         <Flex h="100px" w="60%" >
@@ -70,7 +70,7 @@ export const Cart = () => {
                     </Flex>
                 </Box>
             </Flex>
-            <Flex mt="0.5rem" border="1px solid red" w="100%">
+            <Flex mt="0.5rem"  w="100%">
                 <Box backgroundColor="rgb(250,249,249)" h="110px" w="100%">
                     <Flex p="0.5rem" w="100%"> 
                         <Flex h="100px" w="60%" >
@@ -99,8 +99,8 @@ export const Cart = () => {
             </Flex>
             {/* cart */}
             <Text>cart</Text>
-            <Flex w="100%" border="1px solid black" backgroundColor="#fff" direction="column">
-                <Flex mt="0.5rem" border="1px solid red" w="100%" backgroundColor="#fff">
+            <Flex w="100%"  backgroundColor="#fff" direction="column">
+                <Flex mt="0.5rem"  w="100%" backgroundColor="#fff">
                     <Box backgroundColor="#fff" h="110px" w="100%">
                         <Flex p="0.5rem" w="100%"> 
                             <Flex h="100px" w="60%" >
@@ -119,8 +119,8 @@ export const Cart = () => {
                                     </Flex>
                                 </Box>
                             </Flex>
-                            <Box w="40%" textAlign="right" mt="1.5rem" border="1px solid red">               
-                                <Flex fontSize="12px" border="1px solid red" gap="20px">
+                            <Box w="40%" textAlign="right" mt="1.5rem" >               
+                                <Flex fontSize="12px"  gap="20px">
                                         <Box  w="1em" h="1em" color="black" fontSize="16px" verticalAlign="middle"><MdDelete/></Box>
                                         <Flex justifyContent="space-around" gap="5px">
                                             <Box position="relative" borderRadius="50%" w="19px" h="19px" fontSize="18px" backgroundColor="black" color="white" >
@@ -142,7 +142,7 @@ export const Cart = () => {
                         </Flex>
                     </Box>
                 </Flex>
-                <Flex mt="0.5rem" border="1px solid red" w="100%" backgroundColor="#fff">
+                <Flex mt="0.5rem"  w="100%" backgroundColor="#fff">
                     <Box backgroundColor="rgb(250,249,249)" h="110px" w="100%">
                         <Flex p="0.5rem" w="100%"> 
                             <Flex h="100px" w="60%" >
@@ -171,17 +171,17 @@ export const Cart = () => {
                 </Flex>
             </Flex>
         </Flex>
-        <Flex w={["100%","100%","50%"]} direction="column" ml="1rem" mr="1rem"  border="1px solid red" >
+        <Flex w={["100%","100%","50%"]} direction="column" ml="1rem" mr="1rem"   >
             
-            <Flex mt="1rem" border="1px solid red">
+            <Flex mt="1rem" >
                 <Flex fontSize="1rem" gap="5px" color="#575555">
                     <Image src="https://in.sugarcosmetics.com/desc-images/Offers_price_details.svg" alt="" verticalAlign="middle" w="20px" h="20px" /> <Box>Offers nad Price Details</Box> 
                 </Flex>
             </Flex>
-            <VStack backgroundColor="#faf9f9" borderRadius="10px" p="0.5rem" border="1px solid red">
-                <Flex w="100%" color="#fc2779" justifyContent="space-between" pt="0.5rem" pb="0.5rem" pr="1rem" pl="1rem" border="1px solid red" >
+            <VStack backgroundColor="#faf9f9" borderRadius="10px" p="0.5rem" >
+                <Flex w="100%" color="#fc2779" justifyContent="space-between" pt="0.5rem" pb="0.5rem" pr="1rem" pl="1rem"  >
                     <Flex>
-                        <Box align="center" color="#fc2779" border="1px solid black">
+                        <Box align="center" color="#fc2779" >
                             <Image w="20px" h="20px" verticalAlign="middle" src="https://in.sugarcosmetics.com/desc-images/Offers_icon.svg" alt="" />
                         </Box>
                         <Box pr="0.5rem" pl="0.5rem">
