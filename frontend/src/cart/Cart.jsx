@@ -171,8 +171,120 @@ export const Cart = () => {
                 </Flex>
             </Flex>
         </Flex>
-        <Flex w="50%" direction="row" ml="1rem" mr="1rem"  border="1px solid red" >
-            B
+        <Flex w="50%" direction="column" ml="1rem" mr="1rem"  border="1px solid red" >
+            
+            <Flex mt="1rem" border="1px solid red">
+                <Flex fontSize="1rem" gap="5px" color="#575555">
+                    <Image src="https://in.sugarcosmetics.com/desc-images/Offers_price_details.svg" alt="" verticalAlign="middle" w="20px" h="20px" /> <Box>Offers nad Price Details</Box> 
+                </Flex>
+            </Flex>
+            <VStack backgroundColor="#faf9f9" borderRadius="10px" p="0.5rem" border="1px solid red">
+                <Flex w="100%" color="#fc2779" justifyContent="space-between" pt="0.5rem" pb="0.5rem" pr="1rem" pl="1rem" border="1px solid red" >
+                    <Flex>
+                        <Box align="center" color="#fc2779" border="1px solid black">
+                            <Image w="20px" h="20px" verticalAlign="middle" src="https://in.sugarcosmetics.com/desc-images/Offers_icon.svg" alt="" />
+                        </Box>
+                        <Box pr="0.5rem" pl="0.5rem">
+                            <Text fontSize="15px">GAU2499</Text>
+                        </Box>
+                    </Flex>
+                    <Box>
+                        X
+                    </Box>
+                </Flex>
+                <Box p="0.5rem" w="100%">
+                    <Flex gap="5px">
+                        <Box>
+                            <Image h="20px" w="20px" src="https://in.sugarcosmetics.com/desc-images/PriceDetails.svg" alt="" />
+                        </Box> 
+                        <Box >
+                            <Flex fontSize="13px"> <Box textDecoration="underline">Pric</Box> <Box>e Details</Box> </Flex>
+                        </Box>
+                    </Flex>
+                </Box>
+                <Box backgroundColor="white" borderRadius="0.25rem" w="100%">
+                    <Box pt="0.5rem" pb="0.5rem" w="100%" pr="0.75rem" pl="0.75rem">
+                        <Flex justifyContent="space-between" fontSize="13px" w="100%">
+                            <Flex gap="5px"> 
+                                <Box>
+                                    <Image w="15px" h="15px" src="https://in.sugarcosmetics.com/desc-images/CartSubtotal.svg" alt="" />
+                                </Box>    
+                                <Box>
+                                    Cart Sub Total:
+                                </Box>
+                            </Flex>
+                            <Box>
+                                <Box>₹ 5999</Box>
+                            </Box>
+                        </Flex>
+                    </Box>
+                    <Box pt="0.5rem" pb="0.5rem" w="100%" pr="0.75rem" pl="0.75rem">
+                        <Flex justifyContent="space-between" fontSize="13px" w="100%">
+                            <Flex gap="5px"> 
+                                <Box>
+                                    <Image w="15px" h="15px" src="https://in.sugarcosmetics.com/desc-images/Shipping_Cost.svg" alt="" />
+                                </Box>    
+                                <Box>
+                                    Shipping Cost:
+                                </Box>
+                            </Flex>
+                            <Box>
+                                <Box>₹ 00.00</Box>
+                            </Box>
+                        </Flex>
+                    </Box>
+                    <Box pt="0.5rem" pb="0.5rem" w="100%" pr="0.75rem" pl="0.75rem">
+                        <Flex justifyContent="space-between" fontSize="13px" w="100%">
+                            <Flex gap="5px"> 
+                                <Box>
+                                    <Image w="15px" h="15px" src="https://in.sugarcosmetics.com/desc-images/Discount.svg" alt="" />
+                                </Box>    
+                                <Box>
+                                    Discount applied:
+                                </Box>
+                            </Flex>
+                            <Box>
+                                <Box>₹ 100.00</Box>
+                            </Box>
+                        </Flex>
+                    </Box>
+                    <Box pt="0.5rem" pb="0.5rem" w="100%" pr="0.75rem" pl="0.75rem">
+                        <Flex fontSize="13px" w="100%" wrap="wrap">
+                            <Flex gap="5px" w="70%"> 
+                                <Box>
+                                    <Image w="15px" h="15px" src="https://in.sugarcosmetics.com/desc-images/AmountPayable.svg" alt="" />
+                                </Box>    
+                                <Box >
+                                    Amount Payable:
+                                </Box>
+                            </Flex>
+                            <Box w="30%" textAlign="right">
+                                <Box>₹ 399.00</Box>
+                            </Box>
+                            <Box fontSize="10.5px" pr="1rem" pl="1rem">
+                                <Box>
+                                    Including ₹100 in Taxes
+                                </Box>
+                            </Box>
+                        </Flex>
+                    </Box>
+                </Box>
+                <Box pt="0.5rem" pb="0.5rem" mt="1rem" mb="1rem" w="100%">
+                    <Box w="100%">
+                        <Flex w="100%" border="1px solid #dee2eb" fontsize="13px">
+                            <Flex pt="0.5rem" pr="1rem" pl="1rem">
+                                <Box>-</Box>
+                                <Box textDecoration="underline" fontSize="13px" pr="0.25rem" pl="0.25rem">Continue Shopping</Box>
+                            </Flex>
+                        </Flex>
+                        <Flex flexGrow="1">
+                            <Button >Delivery Information</Button>
+                        </Flex>
+                    </Box>
+                </Box>
+                
+            </VStack>
+
         </Flex>
       </Flex>
     </VStack>
