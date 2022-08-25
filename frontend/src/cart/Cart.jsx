@@ -6,7 +6,7 @@ export const Cart = () => {
   return (
     <VStack w="100%" mt="1.5rem" mr="1rem" ml="1rem" borderRadius="20px" boxShadow='md'>
       <Flex w="100%" direction={["column","column","row"]}>
-        <Flex w="50%" direction="column" border="1px solid red" ml="1rem" mr="1rem">
+        <Flex w={["100%","100%","50%"]} direction="column" border="1px solid red" ml="1rem" mr="1rem">
             <Flex w="100%" mt="1rem" fontSize="14px" color="#575555" border="1px solid green" justifyContent="space-between">
                 <Flex gap="10px"> 
                     <Box>
@@ -171,7 +171,7 @@ export const Cart = () => {
                 </Flex>
             </Flex>
         </Flex>
-        <Flex w="50%" direction="column" ml="1rem" mr="1rem"  border="1px solid red" >
+        <Flex w={["100%","100%","50%"]} direction="column" ml="1rem" mr="1rem"  border="1px solid red" >
             
             <Flex mt="1rem" border="1px solid red">
                 <Flex fontSize="1rem" gap="5px" color="#575555">
@@ -270,17 +270,17 @@ export const Cart = () => {
                     </Box>
                 </Box>
                 <Box pt="0.5rem" pb="0.5rem" mt="1rem" mb="1rem" w="100%">
-                    <Box w="100%">
-                        <Flex w="100%" border="1px solid #dee2eb" fontsize="13px">
-                            <Flex pt="0.5rem" pr="1rem" pl="1rem">
+                    <Flex w="100%">
+                        <Flex w="30%" border="1px solid #dee2eb" fontsize="13px">
+                            <Flex w="100%" pt="0.5rem" pr="1rem" pl="1rem">
                                 <Box>-</Box>
                                 <Box textDecoration="underline" fontSize="13px" pr="0.25rem" pl="0.25rem">Continue Shopping</Box>
                             </Flex>
                         </Flex>
-                        <Flex flexGrow="1">
-                            <Button >Delivery Information</Button>
+                        <Flex w="70%">
+                            <Button w="100%" fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" >Delivery Information</Button>
                         </Flex>
-                    </Box>
+                    </Flex>
                 </Box>
                 
             </VStack>
