@@ -1,5 +1,8 @@
 const jwt = require('jsonwebtoken');
-const fast2sms = require('fast-two-sms');
+require("dotenv").config();
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = require("twilio")(accountSid,authToken)
 const User = require("../models/user.model");
 exports.createUser = (req, res)=>{
     const { firstName, lastName, email, mobileNumber } = req.body;
@@ -19,20 +22,23 @@ exports.createUser = (req, res)=>{
         AccessToken,
         RefreshToken
     });
-    const otp = Math.floor(Math.random() * 10000);
-    fast2sms.send({
-        message: `Your OTP is ${otp}`,
-        numbers: mobileNumber,
-        sender: 'FAST2SMS',
-        sms_type: 'transactional',
-        route: 'p',
-        country: '91'
-    }).then(response => {
-        console.log(response);
-    }).catch(error => {
-        console.log(error);
-    });
 }  
+exports.sendOtp = (req, res)=>{
+    const { mobileNumber } = req.body;
+    const otp = Math.floor(Math.random() * 10000);
+    const message = `Your OTP is ${otp}`;
+    client.messages.create({
+        body: message,
+        to: mobileNumber,
+        from: '+13854386867'
+    })
+    .then(message => console.log(message.sid))
+    .done();
+    res.status(200).json({
+        message: "OTP sent successfully",
+        otp
+    });
+}
 exports.verifyOtp = (req, res)=>{
     const { otp } = req.body;
     const { mobileNumber } = req.body;
