@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, VStack, Flex , Image,Text ,Button   } from "@chakra-ui/react";
 import { MdDelete } from "react-icons/md";
+import { IoIosArrowBack } from "react-icons/io";
 
 export const Cart = () => {
   return (
@@ -273,7 +274,9 @@ export const Cart = () => {
                     <Flex w="100%">
                         <Flex w="30%" border="1px solid #dee2eb" fontsize="13px">
                             <Flex w="100%" pt="0.5rem" pr="1rem" pl="1rem">
-                                <Box>-</Box>
+                                <Box>
+                                    <IoIosArrowBack/>
+                                </Box>
                                 <Box textDecoration="underline" fontSize="13px" pr="0.25rem" pl="0.25rem">Continue Shopping</Box>
                             </Flex>
                         </Flex>
