@@ -2,7 +2,7 @@
 import  Footer  from './Components/Footer/Footer';
 import { Navbar } from './Components/Navbar/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import { Home } from './Pages/Home';
+import { Home } from './Pages/Home/Home';
 
 function App() {
   return (
