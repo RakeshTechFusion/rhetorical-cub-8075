@@ -1,7 +1,7 @@
-const {Router} = require("express");
+const { Router } = require("express");
 
-const Address = require(".././models/address.model")
 const addressroutes = Router()
+const Address = require(".././models/address.model")
 
 addressroutes.get("/:id",async(req, res) => {
     try{
@@ -19,13 +19,15 @@ addressroutes.post("/",async(req, res) => {
     if(!address){
         res.status(400).send({error:true, message:"Please provide a valid address"})
     }
-    try{
-        const add = await Address.create(address)
-        res.status(200).send(add)
-    }
-    catch(e){
-        res.status(400).send({error:true, message:e})
-    }
+    const addres = await Address(req.body)
+     addres.save((err,success)=>{
+        if(err){
+            res.send("error")
+        }
+        else{
+            res.send("success")
+        }
+     })
 })
 
-module.export = addressroutes;
+module.exports = addressroutes;

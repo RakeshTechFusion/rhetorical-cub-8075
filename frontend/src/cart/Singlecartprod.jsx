@@ -38,7 +38,7 @@ export const SingleProduct=({setTotalprice,totalprice})=>{
                                             </Box>
                                             <Box>3</Box>
                                             <Box position="relative" borderRadius="50%" w="19px" h="19px" fontSize="18px" backgroundColor="black" color="white" >
-                                                <Box fontSize="13px" w="100%" h="100%" position="absolute" pb="7px" pr="7px">+</Box>
+                                                <Box fontSize="13px" w="100%" h="100%" position="absolute" pb="7px" pr="10px">+</Box>
                                             </Box>
                                         </Flex>
                                         <Flex>
