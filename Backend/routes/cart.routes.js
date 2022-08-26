@@ -64,7 +64,7 @@ cartroute.put("/:id/dec", async (req, res) => {
   }
 });
 
-cartroute.dec("/:id", async (req, res) => {
+cartroute.delete("/:id", async (req, res) => {
   const id = req.params.id;
   if (!id) {
     res.status(404).send({ message: "unauthorize" });
