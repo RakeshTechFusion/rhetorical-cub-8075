@@ -52,31 +52,31 @@ import {
                       <Box>
                         <Text fontSize="13px" mb="2px">First Name*</Text>
                       </Box>
-                      <Input border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="firstname" placeholder='Enter First Name' w="95%"  outline="none" onChange={handleChange} />
+                      <Input type="text" border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="firstname" placeholder='Enter First Name' w="95%"  outline="none" onChange={handleChange} />
                   </Box>
                   <Box w="50%">
                       <Box>
                         <Text fontSize="13px" mb="2px">Last Name*</Text>
                       </Box>
-                      <Input border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="lastname" placeholder='Enter Last Name' w="95%"  outline="none" onChange={handleChange}/>
+                      <Input type="text" border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="lastname" placeholder='Enter Last Name' w="95%"  outline="none" onChange={handleChange}/>
                   </Box>
                 </Flex>
                   <Box w="100%">
                       <Box>
                         <Text fontSize="13px" mb="2px">Phone Number*</Text>
                       </Box>
-                      <Input border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="phone" placeholder='Enter Registered Phone Number' w="95%"  outline="none" onChange={handleChange}/>
+                      <Input type="text" border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="phone" placeholder='Enter Registered Phone Number' w="95%"  outline="none" onChange={handleChange}/>
                   </Box>
                   <Box w="100%">
                       <Box>
                         <Text fontSize="13px" mb="2px">Address*</Text>
                       </Box>
-                      <Input border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="addressline1" placeholder='Address Line 1' w="95%"  outline="none" onChange={handleChange}/>
-                      <Input border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="addressline2" placeholder='Address Line 2' w="95%"  outline="none" onChange={handleChange}/>
-                      <Input border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="zipcode" placeholder='Zipcode/Pincode' w="50%"  outline="none" onChange={handleChange}/> <br/>
-                      <Input border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="country" placeholder='Country' w="50%"  outline="none" onChange={handleChange}/> <br/>
-                      <Input border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="state" placeholder='State' w="50%"  outline="none" onChange={handleChange}/><br/>
-                      <Input border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="city" placeholder='City' w="50%"  outline="none" onChange={handleChange}/>
+                      <Input type="text" border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="addressline1" placeholder='Address Line 1' w="95%"  outline="none" onChange={handleChange}/>
+                      <Input type="text" border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="addressline2" placeholder='Address Line 2' w="95%"  outline="none" onChange={handleChange}/>
+                      <Input type="text" border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="zipcode" placeholder='Zipcode/Pincode' w="50%"  outline="none" onChange={handleChange}/> <br/>
+                      <Input type="text" border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="country" placeholder='Country' w="50%"  outline="none" onChange={handleChange}/> <br/>
+                      <Input type="text" border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="state" placeholder='State' w="50%"  outline="none" onChange={handleChange}/><br/>
+                      <Input type="text" border="none" fontSize="13px" backgroundColor="#fff" borderBottom="1px solid #eaeaec" name="city" placeholder='City' w="50%"  outline="none" onChange={handleChange}/>
                   </Box>
 
 

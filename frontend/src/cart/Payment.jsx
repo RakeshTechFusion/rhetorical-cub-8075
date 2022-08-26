@@ -1,22 +1,13 @@
 import React from "react";
-import { Box, VStack, Flex , Image,Text ,Button   } from "@chakra-ui/react";
+import { Box, VStack, Flex , Image,Text ,Button ,Input  } from "@chakra-ui/react";
 import { MdDelete } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
 import Addressform from "./AddressModal"
 import axios from "axios";
 
-export const Checkout = () => {
+export const Payment = () => {
 
-    const handleclick=(data)=>{
-        let dataa={
-            ...data,
-            userid:"6308de38308f19bad0e1b3dc"
-        }
-        console.log("formdata",data)
-        axios.post("http://localhost:8080/address/",dataa)
-        .then((res)=>console.log(res.data))
-        .catch((err)=>console.log(err))
-      }
+    
   return (
     <VStack w="100%" mt="1.5rem" pr="1rem" pl="1rem" borderRadius="20px" boxShadow='md' backgroundColor="#fff" >
       <Flex w="100%" direction={["column","column","row"]}>
@@ -157,45 +148,35 @@ export const Checkout = () => {
             
             <Flex mt="1rem" >
                 <Flex fontSize="13px" gap="5px" color="#575555">
-                    <Image src="	https://in.sugarcosmetics.com/desc-images/CustomerInformation.svg" alt="" verticalAlign="middle" w="20px" h="20px" /> <Box>Contact Information</Box> 
+                    <Image src="https://in.sugarcosmetics.com/desc-images/Offers_price_details.svg" alt="" verticalAlign="middle" w="20px" h="20px" /> <Box>Payment Method</Box> 
                 </Flex>
             </Flex>
             <VStack backgroundColor="#faf9f9" borderRadius="10px" p="0.5rem" border="1px solid red" mt="5px">
-                <Box w="100%" pr="0.5rem" pl="0.5rem">
-                    <Flex w="100%" justifyContent="space-between" mt="0.25rem" mb="0.25rem">
-                        <Flex>
-                            <Text fontSize="13px" color="#6c757d">Full Name</Text>
-                            <Text fontSize="14px" pl="0.25rem" fontWeight="bold" color="#6c757d">Haroon Qureshi</Text>
-                        </Flex>
-                        <Flex>
-                            <Text fontSize="13px" color="#6c757d">Phone</Text>
-                            <Text fontSize="14px" pl="0.25rem" fontWeight="bold" color="#6c757d">8529637410</Text>
-                        </Flex>
-                    </Flex>
-                    <Flex>
-                            <Text fontSize="13px" color="#6c757d">Email</Text>
-                            <Text fontSize="14px" pl="0.25rem" fontWeight="bold" color="#6c757d">Haroon@gmail.com</Text>
-                        </Flex>
+                <Box mt="0.5rem" mb="0.5rem" >
+                    <Text fontSize="14px" mb="2px" color="#6c757d" >Select Payment Method</Text>
                 </Box>
-                <Box w="100%" pr="0.5rem" pl="0.5rem" mt="0.25rem">
-                    <Flex w="100%" justifyContent="space-between" mt="0.25rem" mb="0.25rem">
-                        <Flex>
-                            <Text fontSize="13px" fontWeight="450" color="#6c757d">Delivery Address</Text>
+                <VStack w="100%">
+                    <Box backgroundColor="white" m="16px 0" w="100%">
+                        <Flex p="0px 16px" w="100%" justifyContent="space-between">
+                            <Flex>
+                                <Box>
+                                    <Image w="25px" h="25px" src="https://in.sugarcosmetics.com/paymentIcons/upi.svg" alt="" />
+                                </Box>
+                                <Box pr="1rem" pl="1rem" >
+                                    <Text fontSize="12px" fontWeight="450" mt="5px">
+                                        Instant Pay Using Other UPIs(Gpay, PhonePe, BHIM etc.)
+                                    </Text>
+                                </Box>
+                            </Flex>
+                            <Box>
+                                <Image src="https://in.sugarcosmetics.com/desc-images/CheckFilled.svg" alt="" mt="5px" />
+                            </Box>
                         </Flex>
-                        <Flex>
-                            <Addressform handleclick={handleclick}/>
-                        </Flex>          
-                    </Flex>
-                </Box>
-                {/* address */}
-                <Box w="100%" backgroundColor="#fff" borderRadius="0.25rem" pr="1rem" pl="1rem" mt="0.5rem" mr="0.25rem" ml="0.2.5rem" overflowX="hidden">
-                    <Box w="100%" fontSize="14px" fontWeight="450">
-                        <Text>Haroon Qureshi</Text>
-                        <Text>8055674750</Text>
-                        <Text>Nagpur</Text>
-                        <Text>Maharashtra India</Text>
+                        <Box p="8px 16px 16px" w="100%" >
+                            <Input border="none" borderBottom="1px solid #eaeaec" fontSize="16px" placeholder='ENTER UPI ID' size='sm' />
+                        </Box>
                     </Box>
-                </Box>
+                </VStack>
                 <Box pt="0.5rem" pb="0.5rem" mt="1rem" mb="1rem" w="100%" >
                     <Flex w="100%">
                         <Flex w="30%" border="1px solid #dee2eb" fontsize="13px">
@@ -203,11 +184,11 @@ export const Checkout = () => {
                                 <Box>
                                     <IoIosArrowBack/>
                                 </Box>
-                                <Box textDecoration="underline" fontSize="13px" pr="0.25rem" pl="0.25rem">Offers and Pricing</Box>
+                                <Box textDecoration="underline" fontSize="13px" pr="0.25rem" pl="0.25rem">Delivery Info</Box>
                             </Flex>
                         </Flex>
                         <Flex w="70%">
-                            <Button w="100%" _hover={{backgroundColor:"#212529"}} fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" >
+                            <Button variant='solid' _hover={{backgroundColor:"#212529"}} w="100%" fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" >
                                 Proceed To Payment(399)
                             </Button>
                         </Flex>
@@ -222,6 +203,3 @@ export const Checkout = () => {
   );
 };
 
-{/* <Flex>
-                            <Text pt="0.25rem" pb="0.25rem" fontSize="14px" backgroundColor="lightgray">+ Add New Address</Text>             
-                        </Flex> */}

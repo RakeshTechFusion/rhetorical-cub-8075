@@ -3,7 +3,7 @@ const { Cartmodel } = require(".././models/cart.model");
 const { Product } = require(".././models/product.model");
 const cartroute = Router();
 
-cartroute.get("/", async (req, res) => {
+cartroute.get("/:id", async (req, res) => {
   const { id } = req.params.id;
   if (!id) {
     res.status(400).send({ message: "unauthorised" });
@@ -64,7 +64,7 @@ cartroute.put("/:id/dec", async (req, res) => {
   }
 });
 
-cartroute.dec("/:id", async (req, res) => {
+cartroute.delete("/:id", async (req, res) => {
   const id = req.params.id;
   if (!id) {
     res.status(404).send({ message: "unauthorize" });

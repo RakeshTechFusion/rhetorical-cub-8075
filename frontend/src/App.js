@@ -1,4 +1,3 @@
-
 import { Footer } from "./Components/Footer";
 import { Navbar } from "./Components/Navbar";
 import { Routes, Route } from "react-router-dom";
@@ -7,6 +6,7 @@ import { Cart } from "./cart/Cart";
 import { Checkout } from "./cart/Checkout";
 import { Box, VStack, Flex, Image, Text, Button } from "@chakra-ui/react";
 import Makeup from "./Components/Makeup";
+import {Payment} from "./cart/Payment"
 import LoginOtp from "./Components/LoginComponents/LoginOtp";
 import LoginDetails from "./Components/LoginComponents/LoginDetails";
 
@@ -15,10 +15,11 @@ function App() {
     <Box backgroundColor="#f2f2f2" w="100%">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/Makeup" element={<Makeup />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/checkout' element={<Checkout />} />
+        <Route path='/Makeup' element={<Makeup />} />
+        <Route path='/payment' element={<Payment />} />
         <Route path="/loginotp" element={<LoginOtp />} />
         <Route path="/register" element={<LoginDetails />} />
       </Routes>

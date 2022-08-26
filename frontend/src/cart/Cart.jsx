@@ -236,7 +236,7 @@ export const Cart = () => {
                             </Flex>
                         </Flex>
                         <Flex w="70%">
-                            <Button w="100%" fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" onClick={()=>navigate("/checkout")} >Delivery Information</Button>
+                            <Button w="100%" _hover={{backgroundColor:"#212529"}} fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" onClick={()=>navigate("/checkout")} >Delivery Information</Button>
                         </Flex>
                     </Flex>
                 </Box>
