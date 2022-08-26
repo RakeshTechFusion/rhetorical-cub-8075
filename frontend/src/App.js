@@ -6,7 +6,7 @@ import { Home } from './Pages/Home';
 import {Cart} from "./cart/Cart"
 import {Checkout} from "./cart/Checkout"
 import { Box, VStack, Flex , Image,Text ,Button   } from "@chakra-ui/react";
-import Makeup from './components/Makeup';
+import Makeup from './Components/Makeup';
 
 
 function App() {
