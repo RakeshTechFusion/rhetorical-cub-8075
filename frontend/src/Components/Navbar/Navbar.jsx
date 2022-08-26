@@ -14,6 +14,7 @@ import {
   PopoverHeader,
   PopoverTrigger,
   Stack,
+  Text,
 } from '@chakra-ui/react';
 import { AiOutlineUser, AiFillHeart } from 'react-icons/ai';
 import { ImCross } from 'react-icons/im';
@@ -194,6 +195,8 @@ const ButtonData = [
 
 export const Navbar = () => {
   const [show, setShow] = useState(true);
+  const [popOver, setPopOver] = useState(false);
+  console.log(popOver);
   return (
     <Box>
       {show ? (
@@ -248,31 +251,23 @@ export const Navbar = () => {
         {ButtonData.map((e, i) => {
           return (
             <Link key={i} to={e.route}>
-              <Popover placement='bottom-start'>
-                <PopoverTrigger>
-                  <Button variant={'ghost'}>{e.name}</Button>
-                </PopoverTrigger>
-                <PopoverContent w={''} fontSize={''}>
-                  {e.onHover.map((el, j) => {
-                    return (
-                      <Popover key={j} placement='auto-end'>
-                        <PopoverTrigger>
-                          <Button variant={'ghost'}>{el.name}</Button>
-                        </PopoverTrigger>
-                        <PopoverContent w={''}>
-                          {el.onHover.map((elem, k) => {
-                            return (
-                              <Button key={k} variant={'ghost'}>
-                                {elem}
-                              </Button>
-                            );
-                          })}
-                        </PopoverContent>
-                      </Popover>
-                    );
+              <Button
+                variant={'ghost'}
+                onMouseEnter={() => setPopOver(true)}
+                onMouseLeave={() => setPopOver(false)}>
+                {e.name}
+              </Button>
+              {popOver ? (
+                <Box>
+                  {e.onHover.map((el) => {
+                    return(
+                      <Text>{el.name}</Text>
+                      )
                   })}
-                </PopoverContent>
-              </Popover>
+                </Box>
+              ) : (
+                ''
+              )}
             </Link>
           );
         })}
@@ -280,3 +275,29 @@ export const Navbar = () => {
     </Box>
   );
 };
+
+// <Popover placement='bottom-start'>
+//   <PopoverTrigger>
+//     <Button variant={'ghost'}>{e.name}</Button>
+//   </PopoverTrigger>
+//   <PopoverContent w={''} fontSize={''}>
+//     {e.onHover.map((el, j) => {
+//       return (
+//         <Popover key={j} placement='auto-end'>
+//           <PopoverTrigger>
+//             <Button variant={'ghost'}>{el.name}</Button>
+//           </PopoverTrigger>
+//           <PopoverContent w={''}>
+//             {el.onHover.map((elem, k) => {
+//               return (
+//                 <Button key={k} variant={'ghost'}>
+//                   {elem}
+//                 </Button>
+//               );
+//             })}
+//           </PopoverContent>
+//         </Popover>
+//       );
+//     })}
+//   </PopoverContent>
+// </Popover>
