@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 require("dotenv").config();
-const database =process.env.DATABASE 
+const database = process.env.DATABASE;
 const connection = async () => {
   try {
     const connected = await mongoose.connect(
-      database,
+      "mongodb+srv://sugarcosmetic:sugarcosmetic@cluster0.quoaz1y.mongodb.net/sugarcosmetic?retryWrites=true&w=majority",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
