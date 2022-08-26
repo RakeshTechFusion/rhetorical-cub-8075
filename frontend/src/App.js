@@ -1,14 +1,14 @@
-// import './App.css';
-import { Footer } from './Components/Footer';
-import { Navbar } from './Components/Navbar';
-import { Routes, Route } from 'react-router-dom';
-import { Home } from './Pages/Home';
-import {Cart} from "./cart/Cart"
-import {Checkout} from "./cart/Checkout"
-import { Box, VStack, Flex , Image,Text ,Button   } from "@chakra-ui/react";
-import Makeup from './Components/Makeup';
+import { Footer } from "./Components/Footer";
+import { Navbar } from "./Components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./Pages/Home";
+import { Cart } from "./cart/Cart";
+import { Checkout } from "./cart/Checkout";
+import { Box, VStack, Flex, Image, Text, Button } from "@chakra-ui/react";
+import Makeup from "./Components/Makeup";
 import {Payment} from "./cart/Payment"
-
+import LoginOtp from "./Components/LoginComponents/LoginOtp";
+import LoginDetails from "./Components/LoginComponents/LoginDetails";
 
 function App() {
   return (
@@ -20,6 +20,8 @@ function App() {
         <Route path='/checkout' element={<Checkout />} />
         <Route path='/Makeup' element={<Makeup />} />
         <Route path='/payment' element={<Payment />} />
+        <Route path="/loginotp" element={<LoginOtp />} />
+        <Route path="/register" element={<LoginDetails />} />
       </Routes>
       <Footer />
     </Box>
