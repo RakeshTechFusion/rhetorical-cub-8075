@@ -1,0 +1,140 @@
+/* #Banner {
+    margin: 0 5rem;
+    width: 74rem;
+    height: 20rem;
+} */
+.makeupCont{
+    text-align: center;
+}
+.banner{
+    /* border: 1px solid lime; */
+   width: 100%;
+   height: 35vh; 
+   margin-bottom: 2%;
+}
+.banner>img{
+    width: 85%;
+    height: 100%;
+    
+}
+#mapData {
+    margin-left: 3rem;
+    margin-bottom: 4rem;
+}
+#mapData div {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#prodData {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin: auto;
+    width: 80%;
+
+    text-align: center;
+}
+
+#mapDataElem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#mapDataElem:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+#prodData div p:nth-child(2) {
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 50%);
+}
+
+#prodDataImage {
+    width: 12rem;
+    margin: auto;
+    border: 1px solid red; 
+}
+
+#mapDataStar {
+    width: 1rem;
+}
+
+#prodDataHover {
+    display: flex;
+    width: 100%;
+    visibility: hidden;
+}
+
+#prodDataHover div {
+    width: 30%;
+    height: 2rem;
+    border: 1px solid hsl(210, 11%, 15%);
+}
+
+#prodDataHover img {
+    width: 1rem;
+    vertical-align: middle;
+}
+
+#prodDataHover button {
+    width: 70%;
+    height: 2rem;
+    background-color: hsl(210, 11%, 15%);
+    border: 1px solid hsl(210, 11%, 15%);
+    color: white;
+}
+
+#mapDataElem:hover #prodDataHover {
+    visibility: visible;
+}
+
+@media screen and (max-width: 414px) {
+    #productsBanner {
+        margin: 0 0;
+        width: 100%;
+        height: 8rem;
+        overflow: hidden;
+    }
+
+    #prodData {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    #prodDataImage {
+        width: 8rem;
+    }
+
+    #prodDataHover {
+        visibility: visible;
+    }
+}
+
+@media only screen and (min-device-width: 415px) and (max-device-width: 1024px) and (orientation: portrait) {
+    #productsBanner {
+        margin: 0 0;
+        width: 100%;
+        height: 12rem;
+        overflow: hidden;
+    }
+
+    #prodData {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+
+    #prodDataImage {
+        width: 12rem;
+    }
+
+    #prodDataHover {
+        visibility: visible;
+    }
+}

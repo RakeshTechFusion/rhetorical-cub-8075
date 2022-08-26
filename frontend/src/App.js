@@ -6,6 +6,7 @@ import { Home } from './Pages/Home';
 import {Cart} from "./cart/Cart"
 import {Checkout} from "./cart/Checkout"
 import { Box, VStack, Flex , Image,Text ,Button   } from "@chakra-ui/react";
+import Makeup from './components/Makeup';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/checkout' element={<Checkout />} />
+        <Route path='/Makeup' element={<Makeup />} />
       </Routes>
       <Footer />
     </Box>
