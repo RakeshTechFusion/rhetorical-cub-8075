@@ -2,10 +2,13 @@ import React from "react";
 import { Box, VStack, Flex , Image,Text ,Button   } from "@chakra-ui/react";
 import { MdDelete } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
+import {useNavigate} from "react-router-dom"
+
 
 export const Cart = () => {
+    const navigate = useNavigate()
   return (
-    <VStack w="100%" mt="1.5rem" mr="1rem" ml="1rem" borderRadius="20px" boxShadow='md' backgroundColor="#fff" >
+    <VStack w="100%" mt="1.5rem" pr="1rem" pl="1rem" borderRadius="20px" boxShadow='md' backgroundColor="#fff" >
       <Flex w="100%" direction={["column","column","row"]}>
         <Flex w={["100%","100%","50%"]} direction="column"  ml="1rem" mr="1rem">
             <Flex w="100%" mt="1rem" fontSize="14px" color="#575555"  justifyContent="space-between">
@@ -281,7 +284,7 @@ export const Cart = () => {
                             </Flex>
                         </Flex>
                         <Flex w="70%">
-                            <Button w="100%" fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" >Delivery Information</Button>
+                            <Button w="100%" fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" onClick={()=>navigate("/checkout")} >Delivery Information</Button>
                         </Flex>
                     </Flex>
                 </Box>

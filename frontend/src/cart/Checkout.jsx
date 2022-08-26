@@ -2,8 +2,13 @@ import React from "react";
 import { Box, VStack, Flex , Image,Text ,Button   } from "@chakra-ui/react";
 import { MdDelete } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
+import Addressform from "./AddressModal"
 
 export const Checkout = () => {
+
+    const handleclick=(data)=>{
+        console.log("formdata",data)
+      }
   return (
     <VStack w="100%" mt="1.5rem" pr="1rem" pl="1rem" borderRadius="20px" boxShadow='md' backgroundColor="#fff" >
       <Flex w="100%" direction={["column","column","row"]}>
@@ -170,8 +175,8 @@ export const Checkout = () => {
                             <Text fontSize="13px" fontWeight="450" color="#6c757d">Delivery Address</Text>
                         </Flex>
                         <Flex>
-                            <Text pt="0.25rem" pb="0.25rem" fontSize="14px" backgroundColor="lightgray">+ Add New Address</Text>             
-                        </Flex>
+                            <Addressform handleclick={handleclick}/>
+                        </Flex>          
                     </Flex>
                 </Box>
                 {/* address */}
@@ -196,7 +201,7 @@ export const Checkout = () => {
                         <Flex w="70%">
                             <Button w="100%" fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" >
                                 Proceed To Payment(399)
-                                </Button>
+                            </Button>
                         </Flex>
                     </Flex>
                 </Box>
@@ -208,3 +213,7 @@ export const Checkout = () => {
     </VStack>
   );
 };
+
+{/* <Flex>
+                            <Text pt="0.25rem" pb="0.25rem" fontSize="14px" backgroundColor="lightgray">+ Add New Address</Text>             
+                        </Flex> */}
