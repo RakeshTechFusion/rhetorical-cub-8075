@@ -2,106 +2,25 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
-const client = require("twilio")(accountSid, authToken);
 const User = require("../models/user.model");
-exports.createUser = (req, res) => {
-  const { firstName, lastName, email, mobileNumber } = req.body;
-  const AccessToken = jwt.sign(
-    { firstName, lastName, email, mobileNumber },
-    process.env.ACCESS_TOKEN,
-    { expiresIn: "15m" }
-  );
-  const RefreshToken = jwt.sign(
-    { firstName, lastName, email, mobileNumber },
-    process.env.REFRESH_TOKEN,
-    { expiresIn: "1d" }
-  );
-  const user = new User({
-    firstName,
-    lastName,
-    email,
-    mobileNumber,
-    AccessToken,
-    RefreshToken,
-  });
-  user.save();
-  res.status(200).json({
-    message: "User created successfully",
-    AccessToken,
-    RefreshToken,
-  });
+exports.createUser = async (req, res) => {
+  const newUser = new User({ ...req.body });
+
+  try {
+    await newUser.save();
+    res.status(200).send("User created successfully");
+  } catch (err) {
+    console.log(err);
+  }
 };
 exports.sendOtp = (req, res) => {
   const { mobileNumber } = req.body;
   const otp = Math.floor(Math.random() * 10000);
   const message = `Your OTP is ${otp}`;
-  client.messages
-    .create({
-      body: message,
-      to: mobileNumber,
-      from: "+13854386867",
-    })
-    .then((message) => console.log(message.sid))
-    .done();
   res.status(200).json({
-    message: "OTP sent successfully",
-    otp,
+    message: `OTP Sent successfully on ${mobileNumber}`,
+    message,
   });
-};
-exports.verifyOtp = (req, res) => {
-  const { otp } = req.body;
-  const { mobileNumber } = req.body;
-  User.findOne({ mobileNumber }, (err, user) => {
-    if (err) {
-      res.status(500).json({
-        message: "Internal server error",
-      });
-    } else if (!user) {
-      res.status(404).json({
-        message: "User not found",
-      });
-    } else {
-      if (otp == user.otp) {
-        res.status(200).json({
-          message: "OTP verified successfully",
-        });
-      } else {
-        res.status(400).json({
-          message: "OTP not verified",
-        });
-      }
-    }
-  })
-    .catch((err) => {
-      res.status(500).json({
-        message: "Internal server error",
-      });
-    })
-    .then(() => {
-      User.findOneAndUpdate(
-        { mobileNumber },
-        { $set: { otp: null } },
-        (err, user) => {
-          if (err) {
-            res.status(500).json({
-              message: "Internal server error",
-            });
-          } else if (!user) {
-            res.status(404).json({
-              message: "User not found",
-            });
-          } else {
-            res.status(200).json({
-              message: "OTP verified successfully",
-            });
-          }
-        }
-      ).catch((err) => {
-        res.status(500).json({
-          message: "Internal server error",
-        });
-      });
-    });
 };
 exports.loginUser = (req, res) => {
   const { email } = req.body;
@@ -286,7 +205,7 @@ exports.deleteUser = (req, res) => {
 };
 exports.logoutUser = (req, res) => {
   const { AccessToken } = req.headers;
-  jwt.verify(AccessToken,  process.env.ACCESS_TOKEN, (err, decoded) => {
+  jwt.verify(AccessToken, process.env.ACCESS_TOKEN, (err, decoded) => {
     if (err) {
       res.status(500).json({
         message: "Internal server error",

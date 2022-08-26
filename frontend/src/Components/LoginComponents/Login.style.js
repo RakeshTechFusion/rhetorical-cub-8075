@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const LoginContainer = styled.div`
   width: 40%;
   margin: 0 auto;
-  background-color: #fca1c5;
+  background-image: url("https://in.sugarcosmetics.com/Login_bg.svg");
   box-shadow: 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   z-index: 100;
   position: absolute;
@@ -210,12 +210,66 @@ export const MobileOTPBoxBottomMessageLinkDiv = styled.div`
   align-items: center;
   text-align: center;
   justify-content: center;
+  margin-top: ${(props) => (props.mt ? props.mt : "0")};
+  gap: ${(props) => (props.gap ? props.gap : "0")};
 `;
 export const MobileOTPBoxBottomMessageDes = styled.p`
-  font-size: 12px;
+  font-size: ${(props) => props.fs};
 `;
 export const MobileOTPBoxBottomMessageLink = styled.p`
   border-bottom: 1px solid rgba(0, 0, 0, 0.87);
   color: rgba(0, 0, 0, 0.87);
-  font-size: 14px;
+  font-size: ${(props) => props.fs};
+`;
+//Register Page Style
+
+export const RegisterPageGoogle = styled.div`
+  align-content: left;
+  margin: 10px 0;
+`;
+export const RegisterPageGoogleImg = styled.img`
+  width: 160px;
+  height: 40px;
+`;
+
+export const RegisterPageForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`;
+export const RegisterPageFormTitle = styled.p`
+  font-size: 16px;
+`;
+
+export const RegisterPageFormFLInputDiv = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+export const RegisterPageFormFLInput = styled.input`
+  background-color: #f1f1f1;
+  outline: none;
+  border: none;
+  padding: 8px 8px 8px 15px;
+  margin-right: 10px;
+  width: 200px;
+`;
+export const RegisterPageFormEInputDiv = styled.div``;
+export const RegisterPageFormEInput = styled.input`
+  outline: none;
+  border: none;
+  margin-top: 10px;
+  width: 420px;
+  background-color: #f1f1f1;
+  padding: 8px 8px 8px 15px;
+  margin-right: 10px;
+`;
+
+export const RegisterPageFormButton = styled.input`
+  background-color: #fc2779;
+  padding: 10px;
+  color: #fff;
+  outline: none;
+  border: none;
+  margin-top: 10px;
+  width: 420px;
 `;

@@ -7,7 +7,8 @@ import { Cart } from "./cart/Cart";
 import { Checkout } from "./cart/Checkout";
 import { Box, VStack, Flex, Image, Text, Button } from "@chakra-ui/react";
 import Makeup from "./Components/Makeup";
-import LoginPage from "./Pages/LoginPage";
+import LoginOtp from "./Components/LoginComponents/LoginOtp";
+import LoginDetails from "./Components/LoginComponents/LoginDetails";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/Makeup" element={<Makeup />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/loginotp" element={<LoginOtp />} />
+        <Route path="/register" element={<LoginDetails />} />
       </Routes>
       <Footer />
     </Box>
