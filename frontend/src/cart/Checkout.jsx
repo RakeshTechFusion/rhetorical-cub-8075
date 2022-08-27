@@ -33,7 +33,7 @@ export const Checkout = () => {
             setadress(true)
             setAddress({...res.data[0]})
         })
-        .catch((err)=>console.log("error",err))
+        .catch((err)=>console.log("error is occured",err))
       }
       React.useEffect(()=>{
         getaddress()
