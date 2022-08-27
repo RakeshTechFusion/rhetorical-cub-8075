@@ -45,7 +45,7 @@ export const incrementQty = async (req, res) => {
     );
     res.status(200).send(responce);
   } catch (e) {
-    res.status(404).send({ message: "azdcsafdsafsadfdsfgdsfgdsfsf"});
+    res.status(404).send({ message: "azdcsafdsafsadfdsfgdsfgdsfsf" });
   }
 };
 
@@ -59,7 +59,7 @@ export const decrementQty = async (req, res) => {
       id,
       { $inc: { quantity: -1 } },
       { new: true }
-    )
+    );
     res.status(200).send(responce);
   } catch (e) {
     res.status(404).send({ message: e });
