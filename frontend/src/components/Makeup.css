@@ -59,11 +59,12 @@
 #prodDataImage {
     width: 12rem;
     margin: auto;
-    border: 1px solid red; 
+    /* border: 1px solid red;  */
 }
 
 #mapDataStar {
     width: 1rem;
+    margin: auto;
 }
 
 #prodDataHover {
