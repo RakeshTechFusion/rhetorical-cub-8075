@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { MdClose, MdSmartphone } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import {
   LoginContainer,
   LoginHeader,
@@ -25,6 +26,11 @@ import {
   RegisterPageGoogle,
   RegisterPageGoogleImg,
 } from "./Login.style";
+import {
+  loginFailure,
+  loginStart,
+  loginSuccess,
+} from "../../redux/userReducer";
 
 const LoginDetails = () => {
   const navigate = useNavigate();
@@ -32,8 +38,10 @@ const LoginDetails = () => {
   const [email, setEmail] = React.useState("");
   const [firstName, setFirstName] = React.useState("");
   const [lastName, setLastName] = React.useState("");
+  const dispatch = useDispatch();
   const handleRegisterUser = async (e) => {
     e.preventDefault();
+    dispatch(loginStart());
     try {
       const res = await axios.post("http://localhost:8080/api/user/register", {
         email,
@@ -41,10 +49,10 @@ const LoginDetails = () => {
         lastName,
         mobileNumber,
       });
-      console.log(res.data);
+      dispatch(loginSuccess(res.data));
       navigate("/");
     } catch (error) {
-      console.log(error);
+      dispatch(loginFailure());
     }
   };
   return (

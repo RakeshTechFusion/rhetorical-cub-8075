@@ -4,7 +4,7 @@ export const createUser = async (req, res) => {
   const newUser = new User({ ...req.body });
   try {
     await newUser.save();
-    res.status(200).send("User created successfully");
+    res.status(200).send(newUser);
   } catch (err) {
     console.log(err);
   }
