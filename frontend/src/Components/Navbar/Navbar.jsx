@@ -2,20 +2,15 @@ import {
   Box,
   Button,
   Flex,
+  HStack,
   Img,
   Input,
   InputGroup,
   InputRightElement,
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverHeader,
-  PopoverTrigger,
-  Stack,
+  Text,
+  Tooltip,
 } from '@chakra-ui/react';
-import { AiOutlineUser, AiFillHeart } from 'react-icons/ai';
+import { AiFillHeart } from 'react-icons/ai';
 import { ImCross } from 'react-icons/im';
 import { FaUserAlt } from 'react-icons/fa';
 import { BsFillBagCheckFill } from 'react-icons/bs';
@@ -226,7 +221,7 @@ export const Navbar = () => {
             </Button>
           </InputRightElement>
         </InputGroup>
-        <Button>
+        <Button variant={'link'} color={'black'}>
           <Box mr={2}>
             <FaUserAlt size={'18'} />
           </Box>
@@ -244,42 +239,59 @@ export const Navbar = () => {
           </Button>
         </Flex>
       </Flex>
-      <Stack direction={'row'}>
+      <HStack>
         {ButtonData.map((e, i) => {
           return (
-            <Link key={i} to={e.route}>
-              <Popover placement='bottom-start'>
-                <PopoverTrigger>
-                  <Button variant={'ghost'}>{e.name}</Button>
-                </PopoverTrigger>
-                <PopoverContent w={''} fontSize={''}>
-                  {e.onHover.map((el, j) => {
-                    return (
-                      // <Button key={j} fontSize={'13'} variant={'ghost'}>
-                      //   {el.name}
-                      // </Button>
-                      <Popover key={j} placement='auto-end'>
-                        <PopoverTrigger>
-                          <Button variant={'ghost'}>{el.name}</Button>
-                        </PopoverTrigger>
-                        <PopoverContent w={''}>
-                          {el.onHover.map((elem, k) => {
-                            return (
-                              <Button key={k} variant={'ghost'}>
-                                {elem}
-                              </Button>
-                            );
-                          })}
-                        </PopoverContent>
-                      </Popover>
-                    );
-                  })}
-                </PopoverContent>
-              </Popover>
-            </Link>
+            <Tooltip
+              bg={'white'}
+              key={i}
+              label={e.onHover.map((el, j) => {
+                return (
+                  <Box key={j} bg={'white'} fontSize={18} color={'black'} p={2}>
+                    {el.name}
+                  </Box>
+                );
+              })}
+              placement='bottom-start'>
+              <Button>{e.name}</Button>
+            </Tooltip>
           );
         })}
-      </Stack>
+      </HStack>
     </Box>
   );
 };
+
+// <Stack direction={'row'}>
+//   {ButtonData.map((e, i) => {
+//     return (
+//       <Link key={i} to={e.route}>
+//         <Popover placement='bottom-start'>
+//           <PopoverTrigger>
+//             <Button variant={'ghost'}>{e.name}</Button>
+//           </PopoverTrigger>
+//           <PopoverContent w={''} fontSize={''}>
+//             {e.onHover.map((el, j) => {
+//               return (
+//                 <Popover key={j} placement='auto-end'>
+//                   <PopoverTrigger>
+//                     <Button variant={'ghost'}>{el.name}</Button>
+//                   </PopoverTrigger>
+//                   <PopoverContent w={''}>
+//                     {el.onHover.map((elem, k) => {
+//                       return (
+//                         <Button key={k} variant={'ghost'}>
+//                           {elem}
+//                         </Button>
+//                       );
+//                     })}
+//                   </PopoverContent>
+//                 </Popover>
+//               );
+//             })}
+//           </PopoverContent>
+//         </Popover>
+//       </Link>
+//     );
+//   })}
+// </Stack>
