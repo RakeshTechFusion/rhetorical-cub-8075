@@ -85,7 +85,7 @@ import {
             </ModalBody>
   
             <ModalFooter align="center">
-                <Flex border="1px solid red" mr="35%">
+                <Flex mr="35%">
                     <Button borderRadius="0.25rem" fontSize="12px" backgroundColor="#fc2779" color="#fff" p="0.5rem" mr="0.5rem" ml="0.5rem" fontWeight="450" onClick={()=>handleclick(formdata)}>Save and use this Address</Button>
                     <Button borderRadius="0.25rem" fontSize="12px" backgroundColor="#333" color="#fff" p="0.5rem" mr="0.5rem" ml="0.5rem" fontWeight="450" onClick={onClose}>
                         Cancel

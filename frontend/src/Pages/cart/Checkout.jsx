@@ -14,7 +14,7 @@ export const Checkout = () => {
     const { total } = useSelector((state) => state.cart);
     const { currentUser } = useSelector((state) => state.user);
     const navigate = useNavigate();
-    const [address,setAddress] = React.useState(null)
+    const [address,setAddress] = React.useState({})
     const [isaddress,setadress] = React.useState(false)
     const [totalprice,setTotalprice] = React.useState(100)
     const [cartprods,setCartProds] = React.useState([])
@@ -22,20 +22,24 @@ export const Checkout = () => {
     const handleclick=(data)=>{
         let dataa={
             ...data,
-            userId:"6309ab458d1e58ff39b5b04e"
+            userId:currentUser._id
         }
         console.log("formdata",data)
-        axios.post("http://localhost:8080/api/address/",dataa)
-        .then((res)=>getaddress())
+        axios.post("http://localhost:8080/api/address",dataa)
+        .then((res)=>{
+            getaddress()
+            console.log("formdatares",res.data)
+        })
         .catch((err)=>console.log(err))
       }
 
       const getaddress =()=>{
-        axios.get("http://localhost:8080/api/address/6309ab458d1e58ff39b5b04e")
+        axios.get(`http://localhost:8080/api/address/${currentUser._id}`)
         .then((res)=>{
-            console.log("getaddress",res.data[0])
+            console.log("getaddress",res.data,currentUser._id)
             setadress(true)
-            setAddress({...res.data[0]})
+            setAddress({...res.data})
+            console.log("lengthhhh",Object.keys(address).length,"isaddress",isaddress)
         })
         .catch((err)=>console.log("error is occured",err))
       }
@@ -50,6 +54,9 @@ export const Checkout = () => {
         getdata()
         getaddress()
       },[])
+    //   React.useEffect(()=>{
+    //     getaddress()
+    //   },[])
   return (
     <Box w="100%" pr="1rem" pl="1rem">
     <VStack w="100%" mt="1.5rem" pr="1rem" pl="1rem" borderRadius="20px" boxShadow='md' backgroundColor="#fff" >
@@ -187,7 +194,7 @@ export const Checkout = () => {
                 {/* address */}
                 <Box w="100%" backgroundColor="#fff" borderRadius="0.25rem" pr="1rem" pl="1rem" mt="0.5rem" mr="0.25rem" ml="0.2.5rem" overflowX="hidden">
                     {
-                        isaddress==true ?  <Box w="100%" fontSize="14px" fontWeight="450">
+                        address!=null ?  <Box w="100%" fontSize="14px" fontWeight="450">
                         <Text>{address.firstname} {address.lastname}</Text>
                         <Text>{address.phone}</Text>
                         <Text>{address.city}</Text>
@@ -207,7 +214,7 @@ export const Checkout = () => {
                         </Flex>
                         <Flex w="70%">
                             <Button w="100%" _hover={{backgroundColor:"#212529"}} fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" onClick={()=>{
-                                if(isaddress==null){
+                                if(address==null){
                                     return alert("Please Provide a Address")
                                 }
                                 else{
