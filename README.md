@@ -30,49 +30,14 @@ SUGAR Cosmetics is a cruelty-free makeup brand that is high on style and higher 
 
 ### Presentation
 
-[Presentation Video](https://drive.google.com/file/d/1jd3jWLAHgU-pCgQFxHeRAM2kvthXenPr/view)
+[Presentation Video]()
 
 ### Blog
 
-[SugarCosmetics Clone Blog](https://medium.com/@sanjayanganesan/cloning-blue-heaven-cosmetics-page-from-SugarCosmetics-website-2671b7c8463c)
+[SugarCosmetics Clone Blog]()
 
 ## Wbsite Sneak Peeks
 
-- **Home Page**
-
-![Home Page](./Sneak%20Peeks/Home.png?raw=true)
-
-- **Sign In**
-
-![Sign In](./Sneak%20Peeks/Login.png?raw=true)
-
-- **Otp**
-
-![Otp](./Sneak%20Peeks/Otp.png?raw=true)
-
-- **Products**
-
-![Products](./Sneak%20Peeks/Products.png?raw=true)
-
-- **Product**
-
-![Product](./Sneak%20Peeks/Product.png?raw=true)
-
-- **About Us**
-
-![About Us](./Sneak%20Peeks/About.png?raw=true)
-
-- **Contact Us**
-
-![Contact Us](./Sneak%20Peeks/Contact.png?raw=true)
-
-- **On Hover**
-
-![On Hover](./Sneak%20Peeks/Hover.png?raw=true)
-
-- **Thankyou**
-
-![Thankyou](./Sneak%20Peeks/Thankyou.png?raw=true)
 
 # Getting Started with Create React App
 
