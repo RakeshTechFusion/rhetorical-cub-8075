@@ -9,6 +9,7 @@ import Makeup from "./Components/Makeup";
 import {Payment} from "./cart/Payment"
 import LoginOtp from "./Components/LoginComponents/LoginOtp";
 import LoginDetails from "./Components/LoginComponents/LoginDetails";
+import {PaymentSuccess} from "./cart/PaymentSucces"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/payment' element={<Payment />} />
         <Route path="/loginotp" element={<LoginOtp />} />
         <Route path="/register" element={<LoginDetails />} />
+        <Route path="/success" element={<PaymentSuccess />} />
       </Routes>
       <Footer />
     </Box>
