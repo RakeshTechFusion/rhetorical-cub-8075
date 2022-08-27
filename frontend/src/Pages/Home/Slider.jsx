@@ -11,6 +11,7 @@ import styles from './slider.module.css';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper';
+import { Img } from '@chakra-ui/react';
 
 export default function Slider({ arr }) {
   return (
@@ -44,7 +45,7 @@ export default function Slider({ arr }) {
         id='multiImageSlider'>
         {arr.map((elm, index) => (
           <SwiperSlide key={index}>
-            <img className={styles.Mimage} src={elm} alt='multipleImages' />
+            <Img mb={'10'} className={styles.Mimage} src={elm} alt='multipleImages' />
           </SwiperSlide>
         ))}
       </Swiper>
