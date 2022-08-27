@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { MdClose, MdSmartphone } from "react-icons/md";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { MdClose, MdSmartphone } from 'react-icons/md';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   EnterOtpDiv,
   EnterOtpForm,
@@ -36,13 +36,13 @@ import {
   MobileOTPFormMessage,
   MobileOTPFormMessageDiv,
   MobileOTPFormstartDiv,
-} from "./Login.style";
+} from './Login.style';
 
 const LoginOtp = () => {
   const navigate = useNavigate();
-  const [joinMobile, setJoinMobile] = useState("");
-  const [joinOtp, setJoinOtp] = useState("");
-  const [otp, setOtp] = useState("");
+  const [joinMobile, setJoinMobile] = useState('');
+  const [joinOtp, setJoinOtp] = useState('');
+  const [otp, setOtp] = useState('');
   const {
     mobile1,
     mobile2,
@@ -73,12 +73,12 @@ const LoginOtp = () => {
       joinMobile.mobile10;
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/user/sendOTP",
-        mobileNumber
+        'http://localhost:8080/api/user/sendOTP',
+        mobileNumber,
       );
       const myJSON = JSON.stringify(mobileNumber);
-      localStorage.setItem("mobile", myJSON);
-      const otpres = res.data.message.split(" ")[3];
+      localStorage.setItem('mobile', myJSON);
+      const otpres = res.data.message.split(' ')[3];
       setOtp(otpres);
       alert(otpres);
     } catch (error) {
@@ -94,22 +94,24 @@ const LoginOtp = () => {
     e.preventDefault();
     const oOtp = joinOtp.otp1 + joinOtp.otp2 + joinOtp.otp3 + joinOtp.otp4;
     if (oOtp === otp) {
-      alert("OTP verified");
-      navigate("/register");
+      alert('OTP verified');
+      navigate('/register');
     } else {
-      alert("OTP not verified");
+      alert('OTP not verified');
     }
   };
   console.log(otp);
   return (
     <LoginContainer>
       <LoginHeader>
-        <MdClose />
+        <Link to={'/'}>
+          <MdClose />
+        </Link>
         <LoginHeaderTitle>Login/Sign Up</LoginHeaderTitle>
       </LoginHeader>
       <MobileOTPBoxContainer>
         <MobileOTPBoxHeader>
-          <MdSmartphone style={{ height: "30px", width: "30px" }} />
+          <MdSmartphone style={{ height: '30px', width: '30px' }} />
           <MobileOTPBoxHeaderTitle>
             Login/Sign Up Using Phone
           </MobileOTPBoxHeaderTitle>
@@ -121,10 +123,10 @@ const LoginOtp = () => {
           <MobileOTPFormInputMiddle>
             <MobileOTPFormInputDiv>
               <MobileOTPFormInput
-                autoComplete="off"
-                type="tel"
-                maxLength="1"
-                name="mobile1"
+                autoComplete='off'
+                type='tel'
+                maxLength='1'
+                name='mobile1'
                 value={mobile1}
                 onChange={(e) => onInputChange(e)}
               />
@@ -132,97 +134,97 @@ const LoginOtp = () => {
 
             <MobileOTPFormInputDiv>
               <MobileOTPFormInput
-                autoComplete="off"
-                type="tel"
-                maxLength="1"
-                name="mobile2"
+                autoComplete='off'
+                type='tel'
+                maxLength='1'
+                name='mobile2'
                 value={mobile2}
                 onChange={(e) => onInputChange(e)}
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
               <MobileOTPFormInput
-                autoComplete="off"
-                type="tel"
-                maxLength="1"
-                name="mobile3"
+                autoComplete='off'
+                type='tel'
+                maxLength='1'
+                name='mobile3'
                 value={mobile3}
                 onChange={(e) => onInputChange(e)}
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
               <MobileOTPFormInput
-                autoComplete="off"
-                type="tel"
-                maxLength="1"
-                name="mobile4"
+                autoComplete='off'
+                type='tel'
+                maxLength='1'
+                name='mobile4'
                 value={mobile4}
                 onChange={(e) => onInputChange(e)}
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
               <MobileOTPFormInput
-                autoComplete="off"
-                type="tel"
-                maxLength="1"
-                name="mobile5"
+                autoComplete='off'
+                type='tel'
+                maxLength='1'
+                name='mobile5'
                 value={mobile5}
                 onChange={(e) => onInputChange(e)}
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
               <MobileOTPFormInput
-                autoComplete="off"
-                type="tel"
-                maxLength="1"
-                name="mobile6"
+                autoComplete='off'
+                type='tel'
+                maxLength='1'
+                name='mobile6'
                 value={mobile6}
                 onChange={(e) => onInputChange(e)}
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
               <MobileOTPFormInput
-                autoComplete="off"
-                type="tel"
-                maxLength="1"
-                name="mobile7"
+                autoComplete='off'
+                type='tel'
+                maxLength='1'
+                name='mobile7'
                 value={mobile7}
                 onChange={(e) => onInputChange(e)}
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
               <MobileOTPFormInput
-                autoComplete="off"
-                type="tel"
-                maxLength="1"
-                name="mobile8"
+                autoComplete='off'
+                type='tel'
+                maxLength='1'
+                name='mobile8'
                 value={mobile8}
                 onChange={(e) => onInputChange(e)}
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
               <MobileOTPFormInput
-                autoComplete="off"
-                type="tel"
-                maxLength="1"
-                name="mobile9"
+                autoComplete='off'
+                type='tel'
+                maxLength='1'
+                name='mobile9'
                 value={mobile9}
                 onChange={(e) => onInputChange(e)}
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
               <MobileOTPFormInput
-                autoComplete="off"
-                type="tel"
-                maxLength="1"
-                name="mobile10"
+                autoComplete='off'
+                type='tel'
+                maxLength='1'
+                name='mobile10'
                 value={mobile10}
                 onChange={(e) => onInputChange(e)}
               />
             </MobileOTPFormInputDiv>
           </MobileOTPFormInputMiddle>
           <MobileOTPFormInputEnd>
-            <MobileOTPFormInputEndInput type="submit" value="Request OTP" />
+            <MobileOTPFormInputEndInput type='submit' value='Request OTP' />
           </MobileOTPFormInputEnd>
         </MobileOTPForm>
         <MobileOTPFormMessageDiv>
@@ -239,46 +241,46 @@ const LoginOtp = () => {
             <EnterOtpFormInputMainDiv>
               <EnterOtpFormInputDiv>
                 <EnterOtpFormInput
-                  type="tel"
-                  maxLength="1"
-                  name="otp1"
+                  type='tel'
+                  maxLength='1'
+                  name='otp1'
                   value={otp1}
                   onChange={(e) => onInputOtpChange(e)}
                 />
               </EnterOtpFormInputDiv>
               <EnterOtpFormInputDiv>
                 <EnterOtpFormInput
-                  type="tel"
-                  maxLength="1"
-                  name="otp2"
+                  type='tel'
+                  maxLength='1'
+                  name='otp2'
                   value={otp2}
                   onChange={(e) => onInputOtpChange(e)}
                 />
               </EnterOtpFormInputDiv>
               <EnterOtpFormInputDiv>
                 <EnterOtpFormInput
-                  type="tel"
-                  maxLength="1"
-                  name="otp3"
+                  type='tel'
+                  maxLength='1'
+                  name='otp3'
                   value={otp3}
                   onChange={(e) => onInputOtpChange(e)}
                 />
               </EnterOtpFormInputDiv>
               <EnterOtpFormInputDiv>
                 <EnterOtpFormInput
-                  type="tel"
-                  maxLength="1"
-                  name="otp4"
+                  type='tel'
+                  maxLength='1'
+                  name='otp4'
                   value={otp4}
                   onChange={(e) => onInputOtpChange(e)}
                 />
               </EnterOtpFormInputDiv>
             </EnterOtpFormInputMainDiv>
-            <EnterOtpFormInputVerifyButton type="submit" value="Verify OTP" />
+            <EnterOtpFormInputVerifyButton type='submit' value='Verify OTP' />
           </EnterOtpForm>
         </EnterOtpDiv>
         <MobileOTPBoxFooter>
-          <MobileOTPBoxFooterCheckbox type="checkbox" />
+          <MobileOTPBoxFooterCheckbox type='checkbox' />
           <MobileOTPBoxFooterCheckboxLabel>
             Get Important Updates on Whatsapp.
           </MobileOTPBoxFooterCheckboxLabel>
@@ -293,11 +295,11 @@ const LoginOtp = () => {
           necessary to make the purchase process faster and easier.
         </MobileOTPBoxBottomMessageTitle>
         <MobileOTPBoxBottomMessageLinkDiv>
-          <MobileOTPBoxBottomMessageDes fs="12px">
+          <MobileOTPBoxBottomMessageDes fs='12px'>
             By Signing up or logging in, you agree to our
           </MobileOTPBoxBottomMessageDes>
-          <MobileOTPBoxBottomMessageLink fs="14px">
-            {" "}
+          <MobileOTPBoxBottomMessageLink fs='14px'>
+            {' '}
             Terms and Conditions
           </MobileOTPBoxBottomMessageLink>
         </MobileOTPBoxBottomMessageLinkDiv>
