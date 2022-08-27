@@ -11,13 +11,13 @@ import './imageSlider.css'
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper'
-import { Box } from '@chakra-ui/react'
+import { Box, Img } from '@chakra-ui/react'
 
 export default function MainSlider({ arr }) {
   
   return (
     <Box>
-      <Swiper
+      <Swiper 
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -33,7 +33,7 @@ export default function MainSlider({ arr }) {
       >
         {arr.map((elm, index) => (
           <SwiperSlide key={index}>
-            <img className="mainslider_img" src={elm} alt="slider images" />
+            <Img mb={10} className="mainslider_img" src={elm} alt="slider images" />
           </SwiperSlide>
         ))}
       </Swiper>
