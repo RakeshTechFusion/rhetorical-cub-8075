@@ -4,9 +4,13 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import './Makeup.css';
+import { useSelector } from 'react-redux'
 // import { Link } from 'react-router-dom';
 export default function Makeup(){
     const [data, setData] = useState([])
+    const { currentUser } = useSelector((state) => state.user);
+    console.log(currentUser._id,"currrrrrr")
+    var uid=currentUser._id;
     // const [addedCart,setAddedCart]=useState(false)
 
 
@@ -54,28 +58,15 @@ export default function Makeup(){
 
 
 
-const handleaddCart = (e) => {
-  
-  // axios.post(`https://sugar-cosmeticsapi.herokuapp.com/cart`, {
-  //   userid: user._id,
-  //   product: data._id,
-  //   quantity: 1,
-  // });
-
-  console.log(e)
-  var obj={
-    id:e._id,
-    image:e.ImageUrl,
-    title:e.Title,
-    rating:e.Rating
-  }
-  console.log("e id",e.id)
-  localStorage.setItem('selectProd',JSON.stringify(obj))
-  // console.log()
-  var prod=JSON.parse(localStorage.getItem('selectProd'))
-  console.log('prod',prod)
-  
-};
+    const handleaddCart = () => {
+      axios.post(`http://localhost:8080/api/cart`, {
+        userId: uid,
+        productId: data.productId,
+        quantity: 1,
+      });
+      alert("Added to cart!")
+      
+    };
 
 return (
   <div className='makeupCont'>
@@ -103,9 +94,6 @@ return (
                   </div>
                   </div>
             </div>
-
-
-             
       </div>
       <div style={{display:"flex",}}>
         <div>Makeup</div>
@@ -127,6 +115,7 @@ return (
             {
               data.map((elem,i) => {
                 return (
+                  <div>
                   <Link to={{
                     pathname:`/makeup/${elem._id}`,
                   state:data}}
@@ -176,10 +165,11 @@ return (
                                 />
                             </div>
                             
-                            <button onClick={()=>handleaddCart(elem)}>ADD TO CART</button>
+                            <button onClick={handleaddCart}>ADD TO CART</button>
                             </div>
                         </div>
                         </Link>
+                        </div>
                 )
               })}
           </div>

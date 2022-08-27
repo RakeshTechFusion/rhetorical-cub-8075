@@ -19,4 +19,13 @@ const cartSchema = new mongoose.Schema(
   }
 );
 
+// const handleaddCart = () => {
+//   axios.post(`http://localhost:8080/api/cart`, {
+//     userId: `${user.userID}`,
+//     productId: id,
+//     quantity: 1,
+//   });
+  
+// };
+
 export const Cartmodel = mongoose.model("cart", cartSchema);
