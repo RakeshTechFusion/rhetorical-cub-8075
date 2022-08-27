@@ -12,8 +12,11 @@ export const Cart = () => {
     const navigate = useNavigate();
     const [totalprice,setTotalprice] = React.useState(1000)
     const [cartprods,setCartProds] = React.useState([])
+    const {currentUser} = useSelector((state)=>state.user)
     
-
+    const getdata=()=>{
+        axios.get(`http://localhost:8080/api/address/`)
+    }
 
     React.useEffect(() => {
         
