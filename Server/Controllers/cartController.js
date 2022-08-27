@@ -1,14 +1,14 @@
-const { Cartmodel } = require(".././models/cart.model");
-const { Product } = require(".././models/product.model");
-const cartroute = Router();
+import { Cartmodel } from "../Models/cartModel.js";
+import { Product } from "../Models/productModel.js";
 
-export const getCartData =  async (req, res) => {
-  const { id } = req.params.id;
+export const getCartData = async (req, res) => {
+  const { id } = req.params;
+  console.log(id);
   if (!id) {
     res.status(400).send({ message: "unauthorised" });
   }
   try {
-    const data = await Cartmodel.find({ userid: id }).populate("product");
+    const data = await Cartmodel.find({ userId: id });
     console.log("cartdata", data);
     res.status(200).send(data);
   } catch (e) {
@@ -16,33 +16,36 @@ export const getCartData =  async (req, res) => {
   }
 };
 
-export const postToCart =  async (req, res) => {
+export const postToCart = async (req, res) => {
   const data = req.body;
+  // const userId = req.user.id;
+  console.log("data", data);
   if (!data) {
     res.status(400).send({ message: "no valid data" });
   }
+  const responce = new Cartmodel({ ...req.body });
   try {
-    const res = await Cartmodel.create(data);
-    res.status(200).send(res);
+    await responce.save();
+    res.status(200).send("Added to cart");
   } catch (e) {
     res.status(400).send({ message: e });
   }
 };
 
-export const incrementQty =  async (req, res) => {
+export const incrementQty = async (req, res) => {
   const id = req.params.id;
   if (!id) {
     res.status(404).send({ message: "unautorize" });
   }
   try {
-    const res = await Cartmodel.findByIdAndUpdate(
+    const responce = await Cartmodel.findByIdAndUpdate(
       id,
       { $inc: { quantity: 1 } },
       { new: true }
-    ).populate("product");
-    res.status(200).send(res);
+    );
+    res.status(200).send(responce);
   } catch (e) {
-    res.status(404).send({ message: e });
+    res.status(404).send({ message: "azdcsafdsafsadfdsfgdsfgdsfsf"});
   }
 };
 
@@ -52,25 +55,25 @@ export const decrementQty = async (req, res) => {
     res.status(404).send({ message: "unauthorize" });
   }
   try {
-    const res = await Cartmodel.findByIdAndUpdate(
+    const responce = await Cartmodel.findByIdAndUpdate(
       id,
       { $inc: { quantity: -1 } },
       { new: true }
-    ).populate("product");
-    res.status(200).send(res);
+    )
+    res.status(200).send(responce);
   } catch (e) {
     res.status(404).send({ message: e });
   }
 };
 
-export const deleteProduct=  async (req, res) => {
+export const deleteProduct = async (req, res) => {
   const id = req.params.id;
   if (!id) {
     res.status(404).send({ message: "unauthorize" });
   }
   try {
-    const res = await Cartmodel.deleteOne(id);
-    res.status(200).send(res);
+    const responce = await Cartmodel.deleteOne({ id: id });
+    res.status(200).send(responce);
   } catch (e) {
     res.status(403).send({ message: e });
   }

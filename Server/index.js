@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import UserRouter from "./Routes/UserRoutes.js";
 import AddressRouter from "./Routes/addressRoute.js";
+import CartRouter from "./Routes/cartRoute.js";
+import ProductRouter from "./Routes/productRoute.js";
 const app = express();
 
 app.use(cors());
@@ -28,6 +30,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/user", UserRouter);
 app.use("/api/address", AddressRouter);
+app.use("/api/cart", CartRouter);
+app.use("/api/products", ProductRouter);
 
 app.listen(8080, () => {
   connect();
