@@ -222,7 +222,7 @@ export const Navbar = () => {
           </InputRightElement>
         </InputGroup>
         <Link to={'/loginOtp'}>
-          <Button variant={'link'} color={'black'}>
+          <Button variant={'link'} color={'black'} mt={2}>
             <Box mr={2}>
               <FaUserAlt size={'18'} />
             </Box>
@@ -230,24 +230,29 @@ export const Navbar = () => {
           </Button>
         </Link>
         <Flex>
-          <Button p={0} variant={'ghost'}>
-            <AiFillHeart size={18} />
-          </Button>
-          <Button p={0} variant={'ghost'}>
-            <BsFillBagCheckFill size={18} />
-          </Button>
-          <Button p={0} variant={'ghost'}>
-            <MdLocalOffer size={18} />
-          </Button>
+          <Link to={'/wishlist'}>
+            <Button p={0} variant={'ghost'}>
+              <AiFillHeart size={18} />
+            </Button>
+          </Link>
+          <Link to={'/cart'}>
+            <Button p={0} variant={'ghost'}>
+              <BsFillBagCheckFill size={18} />
+            </Button>
+          </Link>
+          <Link to={'/offer'}>
+            <Button p={0} variant={'ghost'}>
+              <MdLocalOffer size={18} />
+            </Button>
+          </Link>
         </Flex>
       </Flex>
       <HStack>
         {ButtonData.map((e, i) => {
           return (
-            <Link to={e.route}>
+            <Link key={i} to={e.route}>
               <Tooltip
                 bg={'white'}
-                key={i}
                 label={e.onHover.map((el, j) => {
                   return (
                     <Box
