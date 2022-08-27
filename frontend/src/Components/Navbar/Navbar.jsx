@@ -60,7 +60,7 @@ const ButtonData = [
         ],
       },
     ],
-    route: '/makup',
+    route: '/makeup',
   },
   {
     name: 'BRUSHES',
@@ -221,12 +221,14 @@ export const Navbar = () => {
             </Button>
           </InputRightElement>
         </InputGroup>
-        <Button variant={'link'} color={'black'}>
-          <Box mr={2}>
-            <FaUserAlt size={'18'} />
-          </Box>
-          Login/Register
-        </Button>
+        <Link to={'/loginOtp'}>
+          <Button variant={'link'} color={'black'}>
+            <Box mr={2}>
+              <FaUserAlt size={'18'} />
+            </Box>
+            Login/Register
+          </Button>
+        </Link>
         <Flex>
           <Button p={0} variant={'ghost'}>
             <AiFillHeart size={18} />
@@ -242,19 +244,26 @@ export const Navbar = () => {
       <HStack>
         {ButtonData.map((e, i) => {
           return (
-            <Tooltip
-              bg={'white'}
-              key={i}
-              label={e.onHover.map((el, j) => {
-                return (
-                  <Box key={j} bg={'white'} fontSize={18} color={'black'} p={2}>
-                    {el.name}
-                  </Box>
-                );
-              })}
-              placement='bottom-start'>
-              <Button>{e.name}</Button>
-            </Tooltip>
+            <Link to={e.route}>
+              <Tooltip
+                bg={'white'}
+                key={i}
+                label={e.onHover.map((el, j) => {
+                  return (
+                    <Box
+                      key={j}
+                      bg={'white'}
+                      fontSize={18}
+                      color={'black'}
+                      p={2}>
+                      {el.name}
+                    </Box>
+                  );
+                })}
+                placement='bottom-start'>
+                <Button>{e.name}</Button>
+              </Tooltip>
+            </Link>
           );
         })}
       </HStack>
