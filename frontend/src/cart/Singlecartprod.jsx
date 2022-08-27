@@ -1,12 +1,25 @@
-import React from "react";
+import React,{ useEffect } from "react";
 import { Box, VStack, Flex , Image,Text ,Button   } from "@chakra-ui/react";
 import { MdDelete } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
+import axios from "axios"
 
 
-export const SingleProduct=({setTotalprice,totalprice})=>{
+export const SingleProduct=({setTotalprice,totalprice,elm,setCartProds})=>{
 
+    // useEffect(() => {
+    //     setTotalprice((state) => state + (elm.product.price * elm.quantity))
+    //   }, [])
+
+    //   const deleteprod=()=>{
+    //         axios.delete(`url/cart/${elm.id}`)
+    //         .then((res)=>{
+    //             setTotalprice((state) => state - (elm.product.price * elm.quantity));
+    //             setCartProds((state) => state.filter((elm) => elm._id != elm._id))
+    //         })
+    //         .catch((err)=> console.log(err))
+    //   }
     
 
     return( 
@@ -34,11 +47,11 @@ export const SingleProduct=({setTotalprice,totalprice})=>{
                                         <Box  w="1em" h="1em" color="black" fontSize="16px" verticalAlign="middle"><MdDelete/></Box>
                                         <Flex justifyContent="space-around" gap="5px">
                                             <Box position="relative" borderRadius="50%" w="19px" h="19px" fontSize="18px" backgroundColor="black" color="white" >
-                                                <Box fontSize="13px" w="100%" h="100%" position="absolute" pb="7px" pr="7px">-</Box>
+                                                <Box fontSize="13px" w="100%" h="100%" position="absolute" pb="10px" pr="7px">-</Box>
                                             </Box>
                                             <Box>3</Box>
                                             <Box position="relative" borderRadius="50%" w="19px" h="19px" fontSize="18px" backgroundColor="black" color="white" >
-                                                <Box fontSize="13px" w="100%" h="100%" position="absolute" pb="7px" pr="10px">+</Box>
+                                                <Box fontSize="13px" w="100%" h="100%" position="absolute" pb="7px" pr="5px">+</Box>
                                             </Box>
                                         </Flex>
                                         <Flex>
