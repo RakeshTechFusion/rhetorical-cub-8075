@@ -10,8 +10,8 @@ import {useNavigate} from "react-router-dom"
 
 export const Checkout = () => {
     const navigate = useNavigate();
-
-    const [isaddress,setadress] = React.useState(0)
+    const [address,setAddress] = React.useState(null)
+    const [isaddress,setadress] = React.useState(false)
     const [totalprice,setTotalprice] = React.useState(1000)
     const [cartprods,setCartProds] = React.useState([])
 
@@ -22,13 +22,17 @@ export const Checkout = () => {
         }
         console.log("formdata",data)
         axios.post("http://localhost:8080/api/address/",dataa)
-        .then((res)=>console.log(res.data))
+        .then((res)=>getaddress())
         .catch((err)=>console.log(err))
       }
 
       const getaddress =()=>{
         axios.get("http://localhost:8080/api/address/6309ab458d1e58ff39b5b04e")
-        .then((res)=>console.log("getaddress",res.data))
+        .then((res)=>{
+            console.log("getaddress",res.data[0])
+            setadress(true)
+            setAddress({...res.data[0]})
+        })
         .catch((err)=>console.log("error",err))
       }
       React.useEffect(()=>{
@@ -209,11 +213,11 @@ export const Checkout = () => {
                 {/* address */}
                 <Box w="100%" backgroundColor="#fff" borderRadius="0.25rem" pr="1rem" pl="1rem" mt="0.5rem" mr="0.25rem" ml="0.2.5rem" overflowX="hidden">
                     {
-                        isaddress!=null ?  <Box w="100%" fontSize="14px" fontWeight="450">
-                        <Text>Haroon Qureshi</Text>
-                        <Text>8055674750</Text>
-                        <Text>Nagpur</Text>
-                        <Text>Maharashtra India</Text>
+                        isaddress==true ?  <Box w="100%" fontSize="14px" fontWeight="450">
+                        <Text>{address.firstname} {address.lastname}</Text>
+                        <Text>{address.phone}</Text>
+                        <Text>{address.city}</Text>
+                        <Text>{address.state}</Text>
                         </Box> : <Text>Add Address To Proceed Further</Text>
                     }
                 </Box>
