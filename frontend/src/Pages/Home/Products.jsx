@@ -1,35 +1,35 @@
-import React, { useRef, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-import styles from './product.module.css'
+import styles from './product.module.css';
 
-import { Pagination, Navigation } from 'swiper'
-import axios from 'axios'
+import { Pagination, Navigation } from 'swiper';
+import axios from 'axios';
 
 export default function Products({ arr, type }) {
-  const notify = () => toast.success('added to cart')
+  const notify = () => toast.success('added to cart');
   // notify()
-  const user = JSON.parse(localStorage.getItem('User'))
+  const user = JSON.parse(localStorage.getItem('User'));
   const addToCart = async (prod) => {
     try {
       const res = await axios.post(
         `https://sugarcosmeticsclone.herokuapp.com/cart/${user._id}`,
         prod,
-      )
-      const data = await res.data
-      console.log('cart-data: ', data)
+      );
+      const data = await res.data;
+      console.log('cart-data: ', data);
     } catch (error) {
-      console.log('error: ', error)
+      console.log('error: ', error);
     }
-  }
+  };
 
-  arr = arr.filter((elm) => elm.category === type)
+  arr = arr.filter((elm) => elm.category === type);
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function Products({ arr, type }) {
         navigation={true}
         modules={[Pagination, Navigation]}
         className={styles.ProductSwiper}
-        id="productsSlider"
+        id='productsSlider'
         breakpoints={{
           500: {
             slidesPerView: 1,
@@ -69,8 +69,7 @@ export default function Products({ arr, type }) {
             spaceBetween: 50,
             slidesPerGroup: 4,
           },
-        }}
-      >
+        }}>
         {arr.map((elm, index) => (
           <SwiperSlide key={index}>
             <div className={styles.productsDiv_individual_home_first}>
@@ -90,12 +89,11 @@ export default function Products({ arr, type }) {
                 </div>
               </div>
               <button
-                onClick={() => {
-                  addToCart(elm)
-                  notify()
-                }}
-                className={styles.addDiv_home}
-              >
+                // onClick={() => {
+                //   addToCart(elm)
+                //   notify()
+                // }}
+                className={styles.addDiv_home}>
                 ADD TO CART
               </button>
             </div>
@@ -103,7 +101,7 @@ export default function Products({ arr, type }) {
         ))}
       </Swiper>
       <ToastContainer
-        position="top-center"
+        position='top-center'
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -114,5 +112,5 @@ export default function Products({ arr, type }) {
         pauseOnHover
       />
     </>
-  )
+  );
 }
