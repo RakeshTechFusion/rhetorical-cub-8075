@@ -17,6 +17,7 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { MdLocalOffer } from "react-icons/md";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const ButtonData = [
   {
@@ -190,6 +191,15 @@ const ButtonData = [
 export const Navbar = () => {
   const navigate = useNavigate();
   const [show, setShow] = useState(true);
+  const { currentUser } = useSelector((state) => state.user);
+
+  const handleLogin = () => {
+    if (currentUser === null) {
+      navigate("/login");
+    } else {
+      navigate("/");
+    }
+  };
   return (
     <Box>
       {show ? (
@@ -223,15 +233,11 @@ export const Navbar = () => {
             </Button>
           </InputRightElement>
         </InputGroup>
-        <Button
-          variant={"link"}
-          color={"black"}
-          onClick={() => navigate("/loginotp")}
-        >
+        <Button variant={"link"} color={"black"} onClick={handleLogin}>
           <Box mr={2}>
             <FaUserAlt size={"18"} />
           </Box>
-          Login/Register
+          {currentUser ? currentUser.firstName : "Login/Register"}
         </Button>
         <Flex>
           <Button p={0} variant={"ghost"}>
