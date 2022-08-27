@@ -6,9 +6,13 @@ import Addressform from "./AddressModal"
 import {SingleProduct} from "./Singlecartprod"
 import axios from "axios";
 import {useNavigate} from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux";
+
 
 
 export const Checkout = () => {
+    const { total } = useSelector((state) => state.cart);
+
     const navigate = useNavigate();
     const [address,setAddress] = React.useState(null)
     const [isaddress,setadress] = React.useState(false)

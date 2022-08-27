@@ -6,10 +6,11 @@ import Addressform from "./AddressModal"
 import axios from "axios";
 import {useNavigate} from "react-router-dom"
 import {SingleProduct} from "./Singlecartprod"
-
+import { useDispatch, useSelector } from "react-redux";
 
 
 export const Payment = () => {
+    const { total } = useSelector((state) => state.cart);
     const navigate = useNavigate();
     const [pay,setpay] = React.useState(false) 
     const [paytype,setPaytype] = React.useState("Cash")

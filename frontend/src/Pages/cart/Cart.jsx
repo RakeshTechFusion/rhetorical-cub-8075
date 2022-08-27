@@ -12,8 +12,15 @@ export const Cart = () => {
     const navigate = useNavigate();
     const [totalprice,setTotalprice] = React.useState(1000)
     const [cartprods,setCartProds] = React.useState([])
+    const { currentUser } = useSelector((state) => state.user);
     
-
+    const getdata=()=>{
+        axios.get(`http://localhost:8080/api/cart/${currentUser._id}`)
+        .then((res)=>{
+            console.log(res.data)
+            setCartProds(res.data)
+        })
+    }
 
     React.useEffect(() => {
         
@@ -125,7 +132,11 @@ export const Cart = () => {
             {/* cart */}
             {/* <Text>cart</Text> */}
             <Flex w="100%"  backgroundColor="#fff" direction="column">
-                <SingleProduct setTotalprice={setTotalprice} totalprice={totalprice} setCartProds={setCartProds} />
+                {
+                    cartprods?.map((ele)=>(
+                        <SingleProduct key={ele.id} elm={ele} setTotalprice={setTotalprice} totalprice={totalprice} setCartProds={setCartProds} />
+                    ))
+                }
             </Flex>
         </Flex>
         <Flex w={["100%","100%","50%"]} direction="column" ml="1rem" mr="1rem"   >
