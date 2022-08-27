@@ -8,6 +8,14 @@ SUGAR Cosmetics is a cruelty-free makeup brand that is high on style and higher 
 
 [SugarCosmetics Clone]()
 
+### Presentation
+
+[Presentation Video]()
+
+### Blog
+
+[SugarCosmetics Clone Blog]()
+
 ### `Tech Stack Used in FrontEnd`
 
 - React || Redux || HTML || CSS || JavaScript
@@ -27,14 +35,6 @@ SUGAR Cosmetics is a cruelty-free makeup brand that is high on style and higher 
 - [@Adarsh-M-Khandare](https://github.com/AdarshKhandare)
 - [@Mohd-Haroon-Qureshi](https://github.com/HarshVardhan-dev)
 - [@Debasree-Ghosh](https://github.com/Debasree-3031999)
-
-### Presentation
-
-[Presentation Video]()
-
-### Blog
-
-[SugarCosmetics Clone Blog]()
 
 ## Wbsite Sneak Peeks
 
