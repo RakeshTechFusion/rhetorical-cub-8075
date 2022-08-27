@@ -12,8 +12,7 @@ export const SingleProduct=({setTotalprice,totalprice,elm,setCartProds})=>{
     const dispatch = useDispatch();
     const [price,setprice] = React.useState(0)
     const [prod,setprod] = React.useState({
-        ImageUrl : "https://cdn.shopify.com/s/files/1/0906/2558/products/2-illuminating-pink.jpg?v=1655964128",
-        Title : "Wonder Woman Creamy Matt"
+        
     })
     const [qty,setqty] = React.useState(elm.quantity)
 

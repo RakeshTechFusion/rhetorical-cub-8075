@@ -10,30 +10,23 @@ import { useDispatch, useSelector } from "react-redux";
 
 export const Cart = () => {
     const navigate = useNavigate();
-    const [totalprice,setTotalprice] = React.useState(1000)
+    const [totalprice,setTotalprice] = React.useState(100)
     const [cartprods,setCartProds] = React.useState([])
     const { currentUser } = useSelector((state) => state.user);
     
     const getdata=()=>{
         axios.get(`http://localhost:8080/api/cart/${currentUser._id}`)
         .then((res)=>{
-            console.log(res.data)
+            console.log("zzzzzzzzz",res.data)
             setCartProds(res.data)
         })
     }
 
     React.useEffect(() => {
-        
+        getdata()
     },[])
-
-    const getdataCart = ()=>{
-        let userid = JSON.parse(localStorage.getItem("userid"));
-        axios.get("url").then((res)=> {
-            console.log(res.data)
-            setTotalprice(res.data)
-        })
-        .catch((err)=> console.log(err))
-    }
+    // currentUser._id
+    
   return (
     <Box w="100%" pr="1rem" pl="1rem">
     <VStack w="100%" mt="1.5rem" pr="1rem" pl="1rem" borderRadius="20px" boxShadow='md' backgroundColor="#fff" >
