@@ -15,7 +15,7 @@ export default function Makeup() {
   const getData = async () => {
     try {
       const res = await axios.get(
-        "https://sugarcosmonem201.herokuapp.com/api/products"
+        "https://sugercosmatic.herokuapp.com/api/products"
       );
       const data = await res.data;
       setData(data);
