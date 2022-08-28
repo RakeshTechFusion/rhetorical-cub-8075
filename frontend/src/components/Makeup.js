@@ -13,7 +13,7 @@ export default function Makeup(){
     const getData = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/makeup"
+          "http://localhost:8080/api/products"
         )
         const data = await res.data
         setData(data)

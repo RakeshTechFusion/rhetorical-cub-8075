@@ -10,7 +10,6 @@ import MakeupDetails from './Components/MakeupDetails';
 import {Payment} from "./Pages/cart/Payment"
 import LoginOtp from "./Components/LoginComponents/LoginOtp";
 import LoginDetails from "./Components/LoginComponents/LoginDetails";
-import MakeupDetails from "./Components/MakeupDetails";
 import {PaymentSuccess} from "./Pages/cart/PaymentSucces"
 
 function App() {
