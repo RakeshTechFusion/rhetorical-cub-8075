@@ -3,17 +3,18 @@ import { useParams } from 'react-router-dom'
 import makeups from "./makeups"
 import "./makeupDesc.css"
 import { MdetailsA } from './MdetailsA'
+import { useSelector } from 'react-redux'
+import axios from 'axios'
 
 export default function MakeupDetails() {
-
-    // prod.clear()
+    const { currentUser } = useSelector((state) => state.user);
+    console.log(currentUser._id,"currrrrrr")
+    var uid=currentUser._id;
     console.log(makeups,"makeups")
     const makeupId=useParams().id
     const makeupDesc=makeups.find( el=> el._id==makeupId)
     console.log(makeupId,makeupDesc)
     let arr = [];
-
-
     let rating = +makeupDesc.Rating;
     let key = 1;
     let fullStar =
@@ -30,6 +31,19 @@ export default function MakeupDetails() {
         }
         rating -= 1;
     }
+
+
+    const handleaddCart = () => {
+          axios.post(`http://localhost:8080/api/cart`, {
+            userId: uid,
+            productId: makeupDesc._id,
+            quantity: 1,
+          });
+          alert("Added to cart!")
+          
+        };
+    
+
     
     return (
         <div>
@@ -89,7 +103,9 @@ export default function MakeupDetails() {
                 <button
                     style={{ zIndex: 10, cursor: "pointer" }}
                     id="productDetailCart"
-                    
+
+                    onClick={handleaddCart}
+ 
                 >
                     Add to cart
                 </button>

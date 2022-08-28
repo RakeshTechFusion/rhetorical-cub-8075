@@ -4,10 +4,14 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import './Makeup.css';
+import { useSelector } from 'react-redux'
 // import { Link } from 'react-router-dom';
 export default function Makeup(){
     const [data, setData] = useState([])
-    // const [addedCart,setAddedCart]=useState(false)
+    const { currentUser } = useSelector((state) => state.user);
+    // console.log(currentUser._id,"currrrrrr")
+    var uid=currentUser._id;
+
 
 
     const getData = async () => {
@@ -17,7 +21,9 @@ export default function Makeup(){
         )
         const data = await res.data
         setData(data)
-        console.log('data: ', data)
+
+        // console.log('data: ', data)
+
       } catch (error) {
         console.log('error: ', error)
       }
@@ -27,56 +33,39 @@ export default function Makeup(){
       getData()
     }, [])
 
-    const aUser={
-      _id:"6308d11d779511dd3c758ed9",
-      firstName:"test1",
-      lastName:"lastnametest1",
-      email:"test123@gmai.com",
-      mobileNumber:"1234567890"
+
+
+    const handleaddCart = () => {
+      axios.post(`http://localhost:8080/api/cart`, {
+        userId: uid,
+        productId: data.productId,
+        quantity: 1,
+      });
+      alert("Added to cart!")
+      
+    };
+
+    const handleSort=(e)=>{
+        console.log(e.target.value,"select data")
+        const sort=e.target.value
+        console.log(sort,"sort")
+
+        if(sort==1){
+          setData((data)=>[...data.sort((a,b)=>(b.Rating-a.Rating))])
+          console.log(data,"a-b")
+        }
+        else if(sort==2){
+          setData((data)=>[...data.sort((a,b)=>(b.Price-a.Price))])
+          console.log(data,"a-b")
+        }
+        else if(sort==3){
+          setData((data)=>[...data.sort((a,b)=>(a.Price-b.Price))])
+          console.log(data,"b-a")
+      }
     }
-    window.localStorage.setItem('aUser',JSON.stringify(aUser));
-    // console.log('auser',aUser)
 
-    var user=JSON.parse(window.localStorage.getItem('aUser'));
+    
 
-    // console.log("parsed",user)
-    // const handleaddCart = () => {
-    //   axios.post(`https://sugar-cosmeticsapi.herokuapp.com/cart`, {
-    //     // user: `${user.userID}`,
-    //     product: data.id,
-    //     quantity: 1,
-    //   });
-    //   console.log(addedCart)
-    //   setAddedCart(true);
-    //   console.log(addedCart)
-    // };
-
-
-
-
-
-const handleaddCart = (e) => {
-  
-  // axios.post(`https://sugar-cosmeticsapi.herokuapp.com/cart`, {
-  //   userid: user._id,
-  //   product: data._id,
-  //   quantity: 1,
-  // });
-
-  console.log(e)
-  var obj={
-    id:e._id,
-    image:e.ImageUrl,
-    title:e.Title,
-    rating:e.Rating
-  }
-  console.log("e id",e.id)
-  localStorage.setItem('selectProd',JSON.stringify(obj))
-  // console.log()
-  var prod=JSON.parse(localStorage.getItem('selectProd'))
-  console.log('prod',prod)
-  
-};
 
 return (
   <div className='makeupCont'>
@@ -106,8 +95,6 @@ return (
                   </div>
             </div>
 
-
-             
       </div>
       <div style={{display:"flex",}}>
         <div>Makeup</div>
@@ -119,7 +106,14 @@ return (
         <div 
             className='afterbanner_right'style={{marginRight:"4%",display:"flex"}}>
 
-            <p>filter, sorting</p>
+<div>
+            <select onChange={handleSort}>
+              <option >Sort by</option>
+              <option value="1">Rating</option>
+              <option value="2">Price - High to Low</option>
+              <option value="3">Price - Low to High</option>
+            </select>
+          </div>
         </div>
 
 </div>  
@@ -129,7 +123,10 @@ return (
             {
               data.map((elem,i) => {
                 return (
-                  <Link to={`/makeup/${elem._id}`}
+                  <div key={i}>
+                  <Link to={{
+                    pathname:`/makeup/${elem._id}`,
+                  state:data}}
                   key={i}>
                         <div
                             id="mapDataElem"
@@ -139,17 +136,9 @@ return (
                             <img
                             id="prodDataImage"
                             src={elem.ImageUrl}
-                            alt={elem.Title}
-                            //   onClick={() => {
-                            //     itemClicked(elem._id.$oid)
-                            //   }}
-                            />
+                            alt={elem.Title}/>
 
-                            <p
-                            //   onClick={() => {
-                            //     itemClicked(elem._id.$oid)
-                            //   }}
-                            >
+                            <p>
                             {elem.Title}
                             </p>
 
@@ -175,13 +164,15 @@ return (
                                 />
                             </div>
                             
-                            <button onClick={()=>handleaddCart(elem)}>ADD TO CART</button>
+                            <button onClick={handleaddCart}>ADD TO CART</button>
                             </div>
                         </div>
                         </Link>
+                        </div>
                 )
               })}
           </div>
       </div>
     )
   }
+

@@ -1,41 +1,47 @@
 var makeups = [
   {
+
     _id: "62a98413ab2a4a8f5eafe638",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
       "https://cdn.shopify.com/s/files/1/0906/2558/products/01_59809bd6-49ef-4c6b-b262-47002bedc963.jpg?v=1639755559",
     Title: "Blend The Rules Eyeshadow Palette",
-    Price: "1199",
+
+    Price: 1199,
     Rating: 4.8,
     RatingTotal: "(96)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
+
+    __v: 0,
   },
   {
-    _id: "62a98413ab2a4a8f5eafe63c",
+    _id: "6309ea6d23a7104c877c82e2",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
       "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-uptown-curl-lengthening-mascara-01-black-beauty-black-28122637828179.jpg?v=1619106532",
     Title: "Uptown Curl Lengthening Mascara - 01 Black Beauty (Black)",
-    Price: "499",
+
+    Price: 499,
+
     Rating: 4.8,
     RatingTotal: "(81)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
+
+    __v: 0,
+  },
+  {
+    _id: "6309ea7c23a7104c877c82e4",
+
     types: [
       {
         title: "types>title",
@@ -47,18 +53,27 @@ var makeups = [
   },
   {
     _id: "62a98413ab2a4a8f5eafe63e",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
       "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-warned-you-so-double-matte-eyeliner-01-black-swan-black-13954562654291.jpg?v=1619116881",
     Title: "Eye Warned You So! Double Matte Eyeliner",
-    Price: "699",
+
+    Price: 699,
+
     Rating: 4.8,
     RatingTotal: "(57)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
+
+    __v: 0,
+  },
+  {
+    _id: "6309ea8923a7104c877c82e6",
+
     types: [
       {
         title: "types>title",
@@ -70,166 +85,146 @@ var makeups = [
   },
   {
     _id: "62a98413ab2a4a8f5eafe63f",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
       "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-warned-you-so-double-matte-eyeliner-01-black-swan-black-12771272261715.jpg?v=1619103165",
     Title: "Eye Warned You So! Double Matte Eyeliner - 01 Black Swan (Black)",
-    Price: "699",
+
+    Price: 699,
+
     Rating: 4.6,
     RatingTotal: "(14)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
+
+    __v: 0,
   },
   {
-    _id: "62a98413ab2a4a8f5eafe641",
+    _id: "6309ea9723a7104c877c82e8",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
       "https://cdn.shopify.com/s/files/1/0906/2558/products/1_9909d205-c5f9-476d-9903-c4beffbfebb7.jpg?v=1637068160",
     Title: "Arch Arrival Brow Pen",
-    Price: "499",
+
+    Price: 499,
+
     Rating: 4.6,
     RatingTotal: "(18)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
+
+    __v: 0,
   },
   {
-    _id: "62a98413ab2a4a8f5eafe644",
+    _id: "6309eaa223a7104c877c82ea",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
       "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-arch-arrival-brow-powder-14753953644627.jpg?v=1619120283",
     Title: "Arch Arrival Brow Powder",
-    Price: "499",
+
+    Price: 499,
+
     Rating: 4.7,
     RatingTotal: "(25)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
+
+    __v: 0,
   },
   {
-    _id: "62a98413ab2a4a8f5eafe645",
+    _id: "6309eab023a7104c877c82ec",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
       "https://cdn.shopify.com/s/files/1/0906/2558/products/1_60aeafc9-9883-4165-ad23-f2a37c65fa96.jpg?v=1640676630",
     Title: "Arch Arrival Brow Definer - 02 Taupe Tom (Grey Brown)",
-    Price: "499",
+
+    Price: 499,
+
     Rating: 4.3,
     RatingTotal: "(15)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
+
+    __v: 0,
   },
   {
-    _id: "62a98413ab2a4a8f5eafe647",
+    _id: "6309eabe23a7104c877c82ee",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
       "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-wingman-waterproof-microliner-01-i-ll-be-black-black-28163915841619.jpg?v=1619117351",
     Title: "Wingman Waterproof Microliner - 01 I'll Be Black (Black)",
-    Price: "499",
+
+    Price: 499,
+
     Rating: 4.7,
     RatingTotal: "(169)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
+
+    __v: 0,
   },
   {
-    _id: "62a98413ab2a4a8f5eafe64d",
+    _id: "6309ead823a7104c877c82f0",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
       "https://cdn.shopify.com/s/files/1/0906/2558/products/1_a0e70fd4-3cf1-4e9d-8345-634c86971469.jpg?v=1639582432",
     Title: "Stroke Of Genius Heavy-duty Kohl - 01 Back To Black (Black)",
-    Price: "499",
+
+    Price: 499,
+
     Rating: 4.8,
     RatingTotal: "(31)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
+
+    __v: 0,
   },
   {
-    _id: "62a98413ab2a4a8f5eafe650",
+    _id: "6309eae323a7104c877c82f2",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
       "https://cdn.shopify.com/s/files/1/0906/2558/products/1_6a5fa1af-0d0e-4e9e-85d1-579495fb5030.jpg?v=1648482145",
     Title: "Arch Arrival Micro Brow Pencil",
-    Price: "499",
+
+    Price: 499,
+
     RatingTotal: "(5)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
+
+    __v: 0,
   },
   {
-    _id: "62a98413ab2a4a8f5eafe654",
+    _id: "6309eb8923a7104c877c82f4",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
@@ -237,763 +232,35 @@ var makeups = [
       "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-twist-and-shout-fadeproof-kajal-02-still-got-the-blues-dark-blue-12771572187219_40970186-afbf-4e5a-a346-f61273099a7a.jpg?v=1632208792",
     Title:
       "Twist And Shout Fadeproof Kajal - 02 Still Got The Blues (Dark Blue)",
-    Price: "399",
+
+    Price: 399,
+
     Rating: 4.7,
     RatingTotal: "(3)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
+
+    __v: 0,
   },
   {
-    _id: "62a98413ab2a4a8f5eafe657",
+    _id: "6309eb9623a7104c877c82f6",
+
     prodEyesBanner:
       "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
     prodEyesHeading: "Eye makeup",
     ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-lit-you-so-vivid-eyeliner-04-yellow-bird-27938825961555.jpg?v=1619153469",
-    Title: "Eye Lit You So! Vivid Eyeliner - 04 Yellow Bird (Pastel Yellow)",
-    Price: "699",
-    Rating: 4,
-    RatingTotal: "(1)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe65a",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-lit-you-so-vivid-eyeliner-06-white-heat-bright-white-28122569998419.jpg?v=1619153489",
-    Title: "Eye Lit You So! Vivid Eyeliner - 06 White Heat (Bright White)",
-    Price: "699",
-    Rating: 4.6,
-    RatingTotal: "(5)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe65d",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/1_b659ec87-4f20-4ee0-a315-6ea961e72cb7.jpg?v=1639582914",
-    Title: "Stroke Of Genius Heavy-Duty Kohl - 03 Green Light (Green)",
-    Price: "299",
-    Rating: 5,
+
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-twist-and-shout-fadeproof-kajal-02-still-got-the-blues-dark-blue-12771572187219_40970186-afbf-4e5a-a346-f61273099a7a.jpg?v=1632208792",
+    Title:
+      "Twist And Shout Fadeproof Kajal - 02 Still Got The Blues (Dark Blue)",
+    Price: 399,
+    Rating: 4.7,
     RatingTotal: "(3)",
     MainCategory: "makeup",
     category: "eyes",
     Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe65e",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/1_1bc2ee85-764e-4fe9-a38c-a4b2fb38880a.jpg?v=1639582935",
-    Title:
-      "Stroke Of Genius Heavy-Duty Kohl - 04 Blue Suede Shoes (Royal Blue)",
-    Price: "499",
-    Rating: 5,
-    RatingTotal: "(2)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe661",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/1_55d1e2d5-4711-4d11-bfa4-dabaee680f1e.jpg?v=1639583910",
-    Title:
-      "Stroke Of Genius Heavy-Duty Kohl - 08 Brown Eyed Girl (Walnut Brown)",
-    Price: "499",
-    Rating: 5,
-    RatingTotal: "(1)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe665",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-told-you-so-smudgeproof-eyeliner-04-foxy-brown-brown-13760285376595.jpg?v=1619116354",
-    Title: "Eye Told You So! Smudgeproof Eyeliner - 04 Foxy Brown (Ashy Brown)",
-    Price: "349",
-    Rating: 3.3,
-    RatingTotal: "(3)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe667",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-warned-you-so-double-matte-eyeliner-03-green-book-marsh-green-13954500100179.jpg?v=1619116854",
-    Title:
-      "Eye Warned You So! Double Matte Eyeliner - 03 Green Book (Marsh Green)",
-    Price: "349",
-    Rating: 5,
-    RatingTotal: "(22)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe66a",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-wonder-woman-mixed-palette-01-cosmos-conqueror-27982322630739.jpg?v=1619155515",
-    Title: "Wonder Woman Mixed Palette - 01 Cosmos Conqueror",
-    Price: "999",
-    Rating: 4.7,
-    RatingTotal: "(14)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad398",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/1_6f55bcac-3e42-4253-88ee-cec0fa43c62a.jpg?v=1645608270",
-    Title: "Matte Attack Transferproof Lipstick",
-    Price: "699",
-    Rating: 4.7,
-    RatingTotal: "(428)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3a0",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-mettle-satin-lipstick-01-sophie-bright-fuchsia-pink-fuchsia-13706258088019.jpg?v=1619116113",
-    Title: "Mettle Satin Lipstick",
-    Price: "999",
-    Rating: 4.8,
-    RatingTotal: "(168)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3a1",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-smudge-me-not-mini-lipstick-black-set-bold-28336482779219.jpg?v=1623073320",
-    Title: "Smudge Me Not Mini Lipstick Black Set - Bold",
-    Price: "799",
-    Rating: 4.6,
-    RatingTotal: "(13)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3a4",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-mettle-liquid-lipstick-01-lyra-cool-toned-plum-13200549380179.jpg?v=1619110238",
-    Title: "Mettle Liquid Lipstick",
-    Price: "599",
-    Rating: 4.9,
-    RatingTotal: "(76)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3a6",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-smudge-me-not-mini-lipstick-mint-green-set-bold-28336482943059.jpg?v=1623073325",
-    Title: "Smudge Me Not Mini Lipstick Mint Green Set - Bold",
-    Price: "799",
-    Rating: 4.5,
-    RatingTotal: "(6)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3aa",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-seal-the-show-lip-primer-14162590433363.jpg?v=1619106825",
-    Title: "Seal The Show Lip Primer",
-    Price: "599",
-    Rating: 4.6,
-    RatingTotal: "(71)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3ae",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-wonder-woman-24-hr-lip-lacquer-27982619738195.jpg?v=1619154969",
-    Title: "Wonder Woman 24 HR Lip Lacquer",
-    Price: "699",
-    Rating: 4.6,
-    RatingTotal: "(28)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3af",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-time-to-shine-lip-gloss-13905851580499.jpg?v=1619116676",
-    Title: "Time To Shine Lip Gloss",
-    Price: "499",
-    Rating: 4.6,
-    RatingTotal: "(71)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3b2",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-lip-service-tint-remover-28122580910163.jpg?v=1619155575",
-    Title: "LIP SERVICE TINT REMOVER",
-    Price: "399",
-    Rating: 4,
-    RatingTotal: "(6)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3b6",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-plush-crush-creme-crayon-13974621519955.jpg?v=1619117067",
-    Title: "Plush Crush Crème Crayon",
-    Price: "349",
-    Rating: 4.7,
-    RatingTotal: "(142)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3b8",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-mini-liquid-lipstick-set-fighter-27950526169171.jpg?v=1620651933",
-    Title: "Mini Liquid Lipstick Set - Fighter",
-    Price: "799",
-    Rating: 4.7,
-    RatingTotal: "(27)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ac9b94f82dd711f63ad3ba",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-mini-liquid-lipstick-set-red-fearless-27943255703635.jpg?v=1620652654",
-    Title: "Mini Liquid Lipstick Set - Fearless",
-    Price: "799",
-    Rating: 4.5,
-    RatingTotal: "(19)",
-    MainCategory: "makeup",
-    category: "lips",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ad79c216493468104a32b3",
-    prodEyesHeading: "Face makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/3_7.jpg?v=1626795160",
-    Title: "All Set To Go Translucent Powder",
-    Price: "599",
-    Rating: 4.8,
-    RatingTotal: "(207)",
-    MainCategory: "makeup",
-    category: "face",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ad79c216493468104a32b5",
-    prodEyesHeading: "Face makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-powder-play-compact-translucent-compact-13728802799699.png?v=1619116324",
-    Title: "Powder Play Compact",
-    Price: "599",
-    Rating: 5,
-    RatingTotal: "(6)",
-    MainCategory: "makeup",
-    category: "face",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ad79c216493468104a32b8",
-    prodEyesHeading: "Face makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-powder-play-banana-compact-28122599424083.jpg?v=1619116314",
-    Title: "Powder Play Banana Compact",
-    Price: "599",
-    Rating: 4.7,
-    RatingTotal: "(82)",
-    MainCategory: "makeup",
-    category: "face",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ad79c216493468104a32ba",
-    prodEyesHeading: "Face makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-grand-finale-spf30-setting-mist-15637215576147.jpg?v=1619151508",
-    Title: "Grand Finale SPF30 Setting Mist",
-    Price: "699",
-    Rating: 4.7,
-    RatingTotal: "(79)",
-    MainCategory: "makeup",
-    category: "face",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ad79c216493468104a32bb",
-    prodEyesHeading: "Face makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-the-most-eligiblur-smoothing-primer-28122626162771.jpg?v=1619115330",
-    Title: "The Most Eligiblur Smoothing Primer",
-    Price: "799",
-    Rating: 4.8,
-    RatingTotal: "(43)",
-    MainCategory: "makeup",
-    category: "face",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ad79c216493468104a32c6",
-    prodEyesHeading: "Face makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-face-fwd-highlighter-stick-01-champagne-champion-champagne-gold-13825399652435.jpg?v=1619116634",
-    Title: "Face Fwd >> Highlighter Stick",
-    Price: "799",
-    Rating: 4.7,
-    RatingTotal: "(29)",
-    MainCategory: "makeup",
-    category: "face",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ad7d0e16493468104a32d8",
-    prodEyesHeading: "Face Brushes",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/BlendTrendFaceBrush-003Contour.jpg?v=1627659996",
-    Title: "Blend Trend Face Brush - 003 Contour",
-    Price: "399",
-    Rating: 4.5,
-    RatingTotal: "(13)",
-    MainCategory: "brushes",
-    category: "face brushes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ad7d0e16493468104a32da",
-    prodEyesHeading: "Face Brushes",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/Blend-Trend-WBG-images-12-min.jpg?v=1627573647",
-    Title: "Blend Trend Dual Face Brush - 075 Powder + Foundation",
-    Price: "599",
-    Rating: 4.8,
-    RatingTotal: "(41)",
-    MainCategory: "brushes",
-    category: "face brushes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62ad7efa16493468104a32e0",
-    prodEyesHeading: "Eye brushes",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/Blend-Trend-WBG-images-3-min.jpg?v=1627573657",
-    Title: "Blend Trend Eyeshadow Brush - 042 Round",
-    Price: "399",
-    Rating: 4.4,
-    RatingTotal: "(5)",
-    MainCategory: "brushes",
-    category: "eyes brushes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe63d",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/1_dfe1216c-0850-458c-8838-0abd46fd57e1.jpg?v=1640676576",
-    Title: "Arch Arrival Brow Definer - 01 Jerry Brown (Medium Brown)",
-    Price: "499",
-    Rating: 4.3,
-    RatingTotal: "(11)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe640",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/Double-Date-Extreme-Volume-Mascara-Powered-by-Images-1025x1400-1.jpg?v=1636386431",
-    Title: "Double Date Extreme Volume Mascara Duo - 01 Blackjack",
-    Price: "799",
-    Rating: 4.8,
-    RatingTotal: "(17)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe642",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/01_391c6f1e-6a8e-4d3f-a5c2-c5bd618e8580.jpg?v=1639755524",
-    Title: "Blend The Rules Eyeshadow Palette - 03 Fantasy (Mauve)",
-    Price: "1199",
-    Rating: 5,
-    RatingTotal: "(5)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe643",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/01_7816b797-71de-432d-9162-1f950806770a.jpg?v=1641223993",
-    Title: "Born To Wing Gel Eyeliner - 01 Blackmagic Woman (Black)",
-    Price: "599",
-    Rating: 4.6,
-    RatingTotal: "(11)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
-  },
-  {
-    _id: "62a98413ab2a4a8f5eafe646",
-    prodEyesBanner:
-      "https://d32baadbbpueqt.cloudfront.net/Collection/8564fe21-69ee-453b-a128-e19be3c279b5.jpg",
-    prodEyesHeading: "Eye makeup",
-    ImageUrl:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-lit-you-so-vivid-eyeliner-01-pink-sphinx-bright-pink-27939452452947.jpg?v=1619153599",
-    Title: "Eye Lit You So! Vivid Eyeliner",
-    Price: "699",
-    Rating: 4.8,
-    RatingTotal: "(27)",
-    MainCategory: "makeup",
-    category: "eyes",
-    Currency: "₹",
-    types: [
-      {
-        title: "types>title",
-        image:
-          "https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",
-        secondary_title: "types>sec-title",
-      },
-    ],
+    __v: 0,
   },
   {
     _id: "62a98413ab2a4a8f5eafe648",
@@ -3102,6 +2369,7 @@ var makeups = [
         secondary_title: "types>sec-title",
       },
     ],
+
   },
 ];
 
