@@ -9,10 +9,8 @@ import { useSelector } from 'react-redux'
 export default function Makeup(){
     const [data, setData] = useState([])
     const { currentUser } = useSelector((state) => state.user);
-    console.log(currentUser._id,"currrrrrr")
+    // console.log(currentUser._id,"currrrrrr")
     var uid=currentUser._id;
-    // const [addedCart,setAddedCart]=useState(false)
-
 
     const getData = async () => {
       try {
@@ -21,7 +19,7 @@ export default function Makeup(){
         )
         const data = await res.data
         setData(data)
-        console.log('data: ', data)
+        // console.log('data: ', data)
       } catch (error) {
         console.log('error: ', error)
       }
@@ -31,32 +29,7 @@ export default function Makeup(){
       getData()
     }, [])
 
-    const aUser={
-      _id:"6308d11d779511dd3c758ed9",
-      firstName:"test1",
-      lastName:"lastnametest1",
-      email:"test123@gmai.com",
-      mobileNumber:"1234567890"
-    }
-    window.localStorage.setItem('aUser',JSON.stringify(aUser));
-    // console.log('auser',aUser)
-
-    var user=JSON.parse(window.localStorage.getItem('aUser'));
-
-    // console.log("parsed",user)
-    // const handleaddCart = () => {
-    //   axios.post(`https://sugar-cosmeticsapi.herokuapp.com/cart`, {
-    //     // user: `${user.userID}`,
-    //     product: data.id,
-    //     quantity: 1,
-    //   });
-    //   console.log(addedCart)
-    //   setAddedCart(true);
-    //   console.log(addedCart)
-    // };
-
-
-
+   
 
     const handleaddCart = () => {
       axios.post(`http://localhost:8080/api/cart`, {
@@ -67,6 +40,27 @@ export default function Makeup(){
       alert("Added to cart!")
       
     };
+
+    const handleSort=(e)=>{
+        console.log(e.target.value,"select data")
+        const sort=e.target.value
+        console.log(sort,"sort")
+
+        if(sort==1){
+          setData((data)=>[...data.sort((a,b)=>(b.Rating-a.Rating))])
+          console.log(data,"a-b")
+        }
+        else if(sort==2){
+          setData((data)=>[...data.sort((a,b)=>(b.Price-a.Price))])
+          console.log(data,"a-b")
+        }
+        else if(sort==3){
+          setData((data)=>[...data.sort((a,b)=>(a.Price-b.Price))])
+          console.log(data,"b-a")
+      }
+    }
+
+    
 
 return (
   <div className='makeupCont'>
@@ -105,7 +99,14 @@ return (
         <div 
             className='afterbanner_right'style={{marginRight:"4%",display:"flex"}}>
 
-            <p>filter, sorting</p>
+<div>
+            <select onChange={handleSort}>
+              <option >Sort by</option>
+              <option value="1">Rating</option>
+              <option value="2">Price - High to Low</option>
+              <option value="3">Price - Low to High</option>
+            </select>
+          </div>
         </div>
 
 </div>  
@@ -115,11 +116,10 @@ return (
             {
               data.map((elem,i) => {
                 return (
-                  <div>
+                  <div key={i}>
                   <Link to={{
                     pathname:`/makeup/${elem._id}`,
                   state:data}}
-                  
                   key={i}>
                         <div
                             id="mapDataElem"
@@ -129,17 +129,9 @@ return (
                             <img
                             id="prodDataImage"
                             src={elem.ImageUrl}
-                            alt={elem.Title}
-                            //   onClick={() => {
-                            //     itemClicked(elem._id.$oid)
-                            //   }}
-                            />
+                            alt={elem.Title}/>
 
-                            <p
-                            //   onClick={() => {
-                            //     itemClicked(elem._id.$oid)
-                            //   }}
-                            >
+                            <p>
                             {elem.Title}
                             </p>
 
@@ -176,12 +168,3 @@ return (
       </div>
     )
   }
-
-
-
-
-
-  
-
-
-  
