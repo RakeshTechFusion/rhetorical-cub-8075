@@ -17,7 +17,7 @@ export const Cart = () => {
     const getdata=()=>{
         axios.get(`http://localhost:8080/api/cart/${currentUser._id}`)
         .then((res)=>{
-            console.log("zzzzzzzzz",res.data)
+            console.log("zzzzzzzzz",res.data,"****",currentUser._id)
             setCartProds(res.data)
         })
     }

@@ -35,10 +35,10 @@ export default function Makeup(){
 
 
 
-    const handleaddCart = () => {
+    const handleaddCart = (el) => {
       axios.post(`http://localhost:8080/api/cart`, {
         userId: uid,
-        productId: data.productId,
+        productId: el._id,
         quantity: 1,
       });
       alert("Added to cart!")
@@ -164,7 +164,7 @@ return (
                                 />
                             </div>
                             
-                            <button onClick={handleaddCart}>ADD TO CART</button>
+                            <button onClick={()=>handleaddCart(elem)}>ADD TO CART</button>
                             </div>
                         </div>
                         </Link>

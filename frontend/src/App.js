@@ -11,7 +11,6 @@ import {Payment} from "./Pages/cart/Payment"
 import LoginOtp from "./Components/LoginComponents/LoginOtp";
 import LoginDetails from "./Components/LoginComponents/LoginDetails";
 import {PaymentSuccess} from "./Pages/cart/PaymentSucces"
-import MakeupDetails from "./Components/MakeupDetails";
 
 
 function App() {

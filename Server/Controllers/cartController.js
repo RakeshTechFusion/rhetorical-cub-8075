@@ -19,7 +19,7 @@ export const getCartData = async (req, res) => {
 export const postToCart = async (req, res) => {
   const data = req.body;
   // const userId = req.user.id;
-  console.log("data", data);
+  console.log("datazzzz", data);
   if (!data) {
     res.status(400).send({ message: "no valid data" });
   }
