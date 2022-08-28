@@ -5,7 +5,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { totalpricee } from "../../redux/cartReducer";
-
+import { ToastContainer, toast } from "react-toastify";
 export const SingleProduct = ({
   setTotalprice,
   totalprice,
@@ -16,13 +16,12 @@ export const SingleProduct = ({
   const dispatch = useDispatch();
   const [price, setprice] = React.useState(0);
   const [prod, setprod] = React.useState({});
-  const [qty, setqty] = React.useState(elm.quantity);
+  const [qty, setqty] = React.useState(0);
 
-  const getdata = () => {
-    axios
+  const getdata = async () => {
+    await axios
       .get(`http://localhost:8080/api/cart/${currentUser._id}`)
       .then((res) => {
-        console.log("zzzzzzzzz", res.data, "****", currentUser._id);
         setCartProds(res.data);
       });
   };
@@ -46,16 +45,16 @@ export const SingleProduct = ({
       .delete(`http://localhost:8080/api/cart/${elm._id}`)
       .then((res) => {
         setTotalprice((state) => state - price * qty);
-        setCartProds((state) => state.filter((elm) => elm._id !== elm._id))
+        setCartProds((state) => state.filter((elm) => elm._id !== elm._id));
         getdata();
-        console.log(res.data);
+        toast.success("Product Deleted");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => toast.error("Something went wrong"));
   };
 
   const handleqty = (act) => {
     if (act == "dec" && qty == 1) {
-      return alert("qty cannot be zero");
+      return toast.warning("Cannot Reduce Quantity");
     }
 
     axios
@@ -64,9 +63,11 @@ export const SingleProduct = ({
         if (act == "inc") {
           setTotalprice((state) => state + price);
           setqty((state) => state + 1);
+          toast.success("Product Quantity Increased");
         } else {
           setTotalprice((state) => state - price);
           setqty((state) => state - 1);
+          toast.success("Product Quantity Decreased");
         }
         dispatch(totalpricee(totalprice));
       });
@@ -186,6 +187,7 @@ export const SingleProduct = ({
           </Box>
         </Flex>
       </Box>
+      <ToastContainer />
     </Flex>
   );
 };

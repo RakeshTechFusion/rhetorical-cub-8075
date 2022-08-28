@@ -40,7 +40,7 @@ import {
 } from "./Login.style";
 import { useDispatch } from "react-redux";
 import { loginSuccess } from "../../redux/userReducer";
-
+import { ToastContainer, toast } from "react-toastify";
 const LoginOtp = () => {
   const navigate = useNavigate();
   const [joinMobile, setJoinMobile] = useState("");
@@ -82,9 +82,9 @@ const LoginOtp = () => {
 
       const otpres = res.data.message.split(" ")[3];
       setOtp(otpres);
-      alert(otpres);
+      toast.success(`Your OTP is ${otpres}`);
     } catch (error) {
-      console.log(error);
+      toast.error(error.response.data.message);
     }
   };
 
@@ -99,16 +99,17 @@ const LoginOtp = () => {
       mobileNumber: Number(mobileNumber),
     });
     if (oOtp === otp) {
+      const myJSON = JSON.stringify(mobileNumber);
+      localStorage.setItem("mobile", myJSON);
       if (res.data.mobileNumber === mobileNumber) {
         dispatch(loginSuccess(res.data));
-        const myJSON = JSON.stringify(Number(mobileNumber));
-        localStorage.setItem("mobile", myJSON);
+        toast.success(`welcome back ${res.data.firstName}`);
         navigate("/");
       } else if (res.data.message === "User not found") {
-        navigate("/loginotp");
+        navigate("/register");
       }
     } else {
-      alert("OTP is not verified");
+      toast.error("OTP is not valid");
     }
   };
 
@@ -380,6 +381,7 @@ const LoginOtp = () => {
           </MobileOTPBoxBottomMessageLink>
         </MobileOTPBoxBottomMessageLinkDiv>
       </MobileOTPBoxBottomMessage>
+      <ToastContainer />
     </LoginContainer>
   );
 };

@@ -12,7 +12,6 @@ export const createUser = async (req, res) => {
       })
       .status(200)
       .json(newUser);
-    res.status(200).send(newUser);
   } catch (err) {
     console.log(err);
   }
@@ -40,7 +39,7 @@ export const verifyOtp = async (req, res) => {
       .status(200)
       .json(FindUser);
   } else {
-    res.status(400).json({
+    res.status(200).json({
       message: "User not found",
     });
   }
