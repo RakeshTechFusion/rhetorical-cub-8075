@@ -1,5 +1,5 @@
-import express from "express";
 import cors from "cors";
+import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import UserRouter from "./Routes/UserRoutes.js";
@@ -33,7 +33,7 @@ app.use("/api/address", AddressRouter);
 app.use("/api/cart", CartRouter);
 app.use("/api/products", ProductRouter);
 
-app.listen(8080, () => {
+app.listen(port, () => {
   connect();
-  console.log("server is running on port 8080");
+  console.log(`server is running on port ${port}`);
 });
