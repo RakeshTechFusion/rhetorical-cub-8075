@@ -12,6 +12,7 @@ import {
   EnterOtpheader,
   LoginContainer,
   LoginHeader,
+  LoginHeaderClose,
   LoginHeaderTitle,
   MobileOTPBoxBottomMessage,
   MobileOTPBoxBottomMessageDes,
@@ -110,11 +111,45 @@ const LoginOtp = () => {
       alert("OTP is not verified");
     }
   };
+
+  const inputfocus = (elmnt) => {
+    if (elmnt.key === "Delete" || elmnt.key === "Backspace") {
+      const next = elmnt.target.tabIndex - 2;
+      if (next > -1) {
+        elmnt.target.form.elements[next].focus();
+      }
+    } else {
+      console.log("next");
+
+      const next = elmnt.target.tabIndex;
+      if (next < 10) {
+        elmnt.target.form.elements[next].focus();
+      }
+    }
+  };
+  const inputfocusOtp = (elmnt) => {
+    if (elmnt.key === "Delete" || elmnt.key === "Backspace") {
+      const next = elmnt.target.tabIndex - 2;
+      if (next > -1) {
+        elmnt.target.form.elements[next].focus();
+      }
+    } else {
+      console.log("next");
+
+      const next = elmnt.target.tabIndex;
+      if (next < 4) {
+        elmnt.target.form.elements[next].focus();
+      }
+    }
+  };
+
   return (
     <LoginContainer>
       <LoginHeader>
         <Link to={"/"}>
-          <MdClose />
+          <LoginHeaderClose>
+            <MdClose />
+          </LoginHeaderClose>
         </Link>
         <LoginHeaderTitle>Login/Sign Up</LoginHeaderTitle>
       </LoginHeader>
@@ -138,6 +173,8 @@ const LoginOtp = () => {
                 name="mobile1"
                 value={mobile1}
                 onChange={(e) => onInputChange(e)}
+                onKeyUp={(e) => inputfocus(e)}
+                tabIndex="1"
               />
             </MobileOTPFormInputDiv>
 
@@ -149,6 +186,8 @@ const LoginOtp = () => {
                 name="mobile2"
                 value={mobile2}
                 onChange={(e) => onInputChange(e)}
+                onKeyUp={(e) => inputfocus(e)}
+                tabIndex="2"
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
@@ -159,6 +198,8 @@ const LoginOtp = () => {
                 name="mobile3"
                 value={mobile3}
                 onChange={(e) => onInputChange(e)}
+                onKeyUp={(e) => inputfocus(e)}
+                tabIndex="3"
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
@@ -169,6 +210,8 @@ const LoginOtp = () => {
                 name="mobile4"
                 value={mobile4}
                 onChange={(e) => onInputChange(e)}
+                onKeyUp={(e) => inputfocus(e)}
+                tabIndex="4"
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
@@ -179,6 +222,8 @@ const LoginOtp = () => {
                 name="mobile5"
                 value={mobile5}
                 onChange={(e) => onInputChange(e)}
+                onKeyUp={(e) => inputfocus(e)}
+                tabIndex="5"
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
@@ -189,6 +234,8 @@ const LoginOtp = () => {
                 name="mobile6"
                 value={mobile6}
                 onChange={(e) => onInputChange(e)}
+                onKeyUp={(e) => inputfocus(e)}
+                tabIndex="6"
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
@@ -199,6 +246,8 @@ const LoginOtp = () => {
                 name="mobile7"
                 value={mobile7}
                 onChange={(e) => onInputChange(e)}
+                onKeyUp={(e) => inputfocus(e)}
+                tabIndex="7"
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
@@ -209,6 +258,8 @@ const LoginOtp = () => {
                 name="mobile8"
                 value={mobile8}
                 onChange={(e) => onInputChange(e)}
+                onKeyUp={(e) => inputfocus(e)}
+                tabIndex="8"
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
@@ -219,6 +270,8 @@ const LoginOtp = () => {
                 name="mobile9"
                 value={mobile9}
                 onChange={(e) => onInputChange(e)}
+                onKeyUp={(e) => inputfocus(e)}
+                tabIndex="9"
               />
             </MobileOTPFormInputDiv>
             <MobileOTPFormInputDiv>
@@ -229,6 +282,8 @@ const LoginOtp = () => {
                 name="mobile10"
                 value={mobile10}
                 onChange={(e) => onInputChange(e)}
+                onKeyUp={(e) => inputfocus(e)}
+                tabIndex="10"
               />
             </MobileOTPFormInputDiv>
           </MobileOTPFormInputMiddle>
@@ -254,34 +309,46 @@ const LoginOtp = () => {
                   maxLength="1"
                   name="otp1"
                   value={otp1}
+                  autoComplete="off"
+                  tabIndex="1"
                   onChange={(e) => onInputOtpChange(e)}
+                  onKeyUp={(e) => inputfocusOtp(e)}
                 />
               </EnterOtpFormInputDiv>
               <EnterOtpFormInputDiv>
                 <EnterOtpFormInput
                   type="tel"
                   maxLength="1"
+                  autoComplete="off"
                   name="otp2"
                   value={otp2}
+                  tabIndex="2"
                   onChange={(e) => onInputOtpChange(e)}
+                  onKeyUp={(e) => inputfocusOtp(e)}
                 />
               </EnterOtpFormInputDiv>
               <EnterOtpFormInputDiv>
                 <EnterOtpFormInput
                   type="tel"
                   maxLength="1"
+                  autoComplete="off"
                   name="otp3"
                   value={otp3}
+                  tabIndex="3"
                   onChange={(e) => onInputOtpChange(e)}
+                  onKeyUp={(e) => inputfocusOtp(e)}
                 />
               </EnterOtpFormInputDiv>
               <EnterOtpFormInputDiv>
                 <EnterOtpFormInput
                   type="tel"
                   maxLength="1"
+                  autoComplete="off"
                   name="otp4"
+                  tabIndex="4"
                   value={otp4}
                   onChange={(e) => onInputOtpChange(e)}
+                  onKeyUp={(e) => inputfocusOtp(e)}
                 />
               </EnterOtpFormInputDiv>
             </EnterOtpFormInputMainDiv>
