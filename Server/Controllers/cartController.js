@@ -68,6 +68,7 @@ export const decrementQty = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
   const id = req.params.id;
+  console.log(id)
   if (!id) {
     res.status(404).send({ message: "unauthorize" });
   }

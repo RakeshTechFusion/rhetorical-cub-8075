@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 export const Checkout = () => {
-    const { total } = useSelector((state) => state.cart);
+    // const { total } = useSelector((state) => state.cart);
     const { currentUser } = useSelector((state) => state.user);
     const navigate = useNavigate();
     const [address,setAddress] = React.useState({})

@@ -24,7 +24,7 @@ export const Cart = () => {
 
     React.useEffect(() => {
         getdata()
-    },[])
+    },[setCartProds])
     // currentUser._id
     
   return (
