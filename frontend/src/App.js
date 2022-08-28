@@ -10,8 +10,8 @@ import MakeupDetails from './Components/MakeupDetails';
 import {Payment} from "./Pages/cart/Payment"
 import LoginOtp from "./Components/LoginComponents/LoginOtp";
 import LoginDetails from "./Components/LoginComponents/LoginDetails";
+import MakeupDetails from "./Components/MakeupDetails";
 import {PaymentSuccess} from "./Pages/cart/PaymentSucces"
-
 
 function App() {
   return (
@@ -26,6 +26,8 @@ function App() {
         <Route path='/payment' element={<Payment />} />
         <Route path="/loginotp" element={<LoginOtp />} />
         <Route path="/register" element={<LoginDetails />} />
+        <Route path='/makeup' element={<Makeup />} />
+        <Route path='/makeup/:id' element={<MakeupDetails />}/>
         <Route path="/success" element={<PaymentSuccess />} />
       </Routes>
       <Footer />
