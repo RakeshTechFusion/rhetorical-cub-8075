@@ -10,7 +10,6 @@ export default function MakeupDetails() {
     const { currentUser } = useSelector((state) => state.user);
     console.log(currentUser._id,"currrrrrr")
     var uid=currentUser._id;
-    
     console.log(makeups,"makeups")
     const makeupId=useParams().id
     const makeupDesc=makeups.find( el=> el._id==makeupId)
@@ -33,6 +32,7 @@ export default function MakeupDetails() {
         rating -= 1;
     }
 
+
     const handleaddCart = () => {
           axios.post(`http://localhost:8080/api/cart`, {
             userId: uid,
@@ -43,6 +43,7 @@ export default function MakeupDetails() {
           
         };
     
+
     
     return (
         <div>
@@ -102,8 +103,9 @@ export default function MakeupDetails() {
                 <button
                     style={{ zIndex: 10, cursor: "pointer" }}
                     id="productDetailCart"
+
                     onClick={handleaddCart}
-                    
+ 
                 >
                     Add to cart
                 </button>

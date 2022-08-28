@@ -10,23 +10,23 @@ import { useDispatch, useSelector } from "react-redux";
 
 export const Cart = () => {
     const navigate = useNavigate();
-    const [totalprice,setTotalprice] = React.useState(1000)
+    const [totalprice,setTotalprice] = React.useState(100)
     const [cartprods,setCartProds] = React.useState([])
+    const { currentUser } = useSelector((state) => state.user);
     
-
+    const getdata=()=>{
+        axios.get(`http://localhost:8080/api/cart/${currentUser._id}`)
+        .then((res)=>{
+            console.log("zzzzzzzzz",res.data)
+            setCartProds(res.data)
+        })
+    }
 
     React.useEffect(() => {
-        
+        getdata()
     },[])
-
-    const getdataCart = ()=>{
-        let userid = JSON.parse(localStorage.getItem("userid"));
-        axios.get("url").then((res)=> {
-            console.log(res.data)
-            setTotalprice(res.data)
-        })
-        .catch((err)=> console.log(err))
-    }
+    // currentUser._id
+    
   return (
     <Box w="100%" pr="1rem" pl="1rem">
     <VStack w="100%" mt="1.5rem" pr="1rem" pl="1rem" borderRadius="20px" boxShadow='md' backgroundColor="#fff" >
@@ -125,7 +125,11 @@ export const Cart = () => {
             {/* cart */}
             {/* <Text>cart</Text> */}
             <Flex w="100%"  backgroundColor="#fff" direction="column">
-                <SingleProduct setTotalprice={setTotalprice} totalprice={totalprice} setCartProds={setCartProds} />
+                {
+                    cartprods?.map((ele)=>(
+                        <SingleProduct key={ele.id} elm={ele} setTotalprice={setTotalprice} totalprice={totalprice} setCartProds={setCartProds} />
+                    ))
+                }
             </Flex>
         </Flex>
         <Flex w={["100%","100%","50%"]} direction="column" ml="1rem" mr="1rem"   >

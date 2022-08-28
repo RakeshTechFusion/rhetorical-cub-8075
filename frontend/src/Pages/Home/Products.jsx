@@ -11,6 +11,7 @@ import styles from './product.module.css';
 
 import { Pagination, Navigation } from 'swiper';
 import axios from 'axios';
+import { Box, Img } from '@chakra-ui/react';
 
 export default function Products({ arr, type }) {
   const notify = () => toast.success('added to cart');
@@ -32,7 +33,7 @@ export default function Products({ arr, type }) {
   arr = arr.filter((elm) => elm.category === type);
 
   return (
-    <>
+    <Box>
       <Swiper
         slidesPerView={'auto'}
         spaceBetween={0}
@@ -72,8 +73,8 @@ export default function Products({ arr, type }) {
         }}>
         {arr.map((elm, index) => (
           <SwiperSlide key={index}>
-            <div className={styles.productsDiv_individual_home_first}>
-              <img src={elm.ImageUrl} />
+            <Box mb={10} className={styles.productsDiv_individual_home_first}>
+              <Img src={elm.ImageUrl} />
               <p className={styles.title_products_home}>{elm.Title}</p>
               <div className={styles.currencyDiv_products_home}>
                 <div>
@@ -96,7 +97,7 @@ export default function Products({ arr, type }) {
                 className={styles.addDiv_home}>
                 ADD TO CART
               </button>
-            </div>
+            </Box>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -111,6 +112,6 @@ export default function Products({ arr, type }) {
         draggable
         pauseOnHover
       />
-    </>
+    </Box>
   );
 }

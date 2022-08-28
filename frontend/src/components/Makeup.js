@@ -12,6 +12,8 @@ export default function Makeup(){
     // console.log(currentUser._id,"currrrrrr")
     var uid=currentUser._id;
 
+
+
     const getData = async () => {
       try {
         const res = await axios.get(
@@ -19,7 +21,9 @@ export default function Makeup(){
         )
         const data = await res.data
         setData(data)
+
         // console.log('data: ', data)
+
       } catch (error) {
         console.log('error: ', error)
       }
@@ -29,7 +33,7 @@ export default function Makeup(){
       getData()
     }, [])
 
-   
+
 
     const handleaddCart = () => {
       axios.post(`http://localhost:8080/api/cart`, {
@@ -62,11 +66,13 @@ export default function Makeup(){
 
     
 
+
 return (
   <div className='makeupCont'>
     <div className='banner'>
             <img src='https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg' alt='banner' />
         </div>
+
 
 
 <div className='afterbanner' style={{display:"flex", justifyContent:"space-between"}}>
@@ -88,6 +94,7 @@ return (
                   </div>
                   </div>
             </div>
+
       </div>
       <div style={{display:"flex",}}>
         <div>Makeup</div>
@@ -168,3 +175,4 @@ return (
       </div>
     )
   }
+
