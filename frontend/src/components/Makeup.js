@@ -1,31 +1,26 @@
-import axios from 'axios'
-import React from 'react'
-import { useEffect } from 'react'
+import axios from "axios";
+import React from "react";
+import { useEffect } from "react";
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import './Makeup.css';
-// import { Link } from 'react-router-dom';
-export default function Makeup(){
-    const [data, setData] = useState([])
-    // const [addedCart,setAddedCart]=useState(false)
+import { useState } from "react";
+import "./Makeup.css";
+export default function Makeup() {
+  const [data, setData] = useState([]);
 
-
-    const getData = async () => {
-      try {
-        const res = await axios.get(
-          "http://localhost:3000/makeup"
-        )
-        const data = await res.data
-        setData(data)
-        console.log('data: ', data)
-      } catch (error) {
-        console.log('error: ', error)
-      }
+  const getData = async () => {
+    try {
+      const res = await axios.get("http://localhost:3000/makeup");
+      const data = await res.data;
+      setData(data);
+      console.log("data: ", data);
+    } catch (error) {
+      console.log("error: ", error);
     }
+  };
 
-    useEffect(() => {
-      getData()
-    }, [])
+  useEffect(() => {
+    getData();
+  }, []);
 
     const aUser={
       _id:"6308d11d779511dd3c758ed9",
@@ -144,27 +139,27 @@ export default function Makeup(){
                             //   }}
                             />
 
-                            <p
-                            //   onClick={() => {
-                            //     itemClicked(elem._id.$oid)
-                            //   }}
-                            >
-                            {elem.Title}
-                            </p>
+              <p
+              //   onClick={() => {
+              //     itemClicked(elem._id.$oid)
+              //   }}
+              >
+                {elem.Title}
+              </p>
 
-                            <p>
-                            {elem.Currency}
-                            {elem.Price}
-                            </p>
+              <p>
+                {elem.Currency}
+                {elem.Price}
+              </p>
 
-                            <p>
-                            <img
-                                id="mapDataStar"
-                                src="https://img.freepik.com/free-vector/golden-star-3d_1053-79.jpg?w=740&t=st=1655214227~exp=1655214827~hmac=02adf4c8e90961a6603d966c85d2c548b79d9f0c1f8593787d3a3f478999dd1f"
-                                alt="Star"
-                            />
-                            {elem.Rating} {elem.RatingTotal}
-                            </p>
+              <p>
+                <img
+                  id="mapDataStar"
+                  src="https://img.freepik.com/free-vector/golden-star-3d_1053-79.jpg?w=740&t=st=1655214227~exp=1655214827~hmac=02adf4c8e90961a6603d966c85d2c548b79d9f0c1f8593787d3a3f478999dd1f"
+                  alt="Star"
+                />
+                {elem.Rating} {elem.RatingTotal}
+              </p>
 
                             <div id="prodDataHover">
                             <div>
@@ -185,11 +180,3 @@ export default function Makeup(){
     )
   }
 
-
-
-
-
-  
-
-
-  

@@ -10,24 +10,25 @@ import { useDispatch, useSelector } from "react-redux";
 
 export const Cart = () => {
     const navigate = useNavigate();
-    const [totalprice,setTotalprice] = React.useState(0)
+    const [totalprice,setTotalprice] = React.useState(100)
     const [cartprods,setCartProds] = React.useState([])
+    const { currentUser } = useSelector((state) => state.user);
     
-
+    const getdata=()=>{
+        axios.get(`http://localhost:8080/api/cart/${currentUser._id}`)
+        .then((res)=>{
+            console.log("zzzzzzzzz",res.data)
+            setCartProds(res.data)
+        })
+    }
 
     React.useEffect(() => {
-
+        getdata()
     },[])
-
-    const getdataCart = ()=>{
-        let userid = JSON.parse(localStorage.getItem("userid"));
-        axios.get("url").then((res)=> {
-            console.log(res.data)
-            setTotalprice(res.data)
-        })
-        .catch((err)=> console.log(err))
-    }
+    // currentUser._id
+    
   return (
+    <Box w="100%" pr="1rem" pl="1rem">
     <VStack w="100%" mt="1.5rem" pr="1rem" pl="1rem" borderRadius="20px" boxShadow='md' backgroundColor="#fff" >
       <Flex w="100%" direction={["column","column","row"]}>
         <Flex w={["100%","100%","50%"]} direction="column"  ml="1rem" mr="1rem">
@@ -38,7 +39,7 @@ export const Cart = () => {
                     </Box>
                     Order Summary
                 </Flex>
-                <Box textDecoration="underline">Cart Total : Rs. 2796.00</Box>
+                <Box textDecoration="underline" fontSize="1rem">Cart Total : RS. {totalprice-100}.00</Box>
             </Flex>
             <Flex mt="0.5rem"  w="100%">
                 <Box backgroundColor="rgb(250,249,249)" h="110px" w="100%">
@@ -72,7 +73,7 @@ export const Cart = () => {
                     <Flex p="0.5rem" w="100%"> 
                         <Flex h="100px" w="60%" >
                             <Box w="25%"  p="5px 15px">
-                                <Image h="100%" w="100%" borderRadius="0.25rem" src='https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-matte-as-hell-crayon-mini-lipstick-12-baby-houseman-28220228632659_584be809-56c3-4baf-b90b-8db9e95b2afe.jpg?v=1659698252' alt=''/>
+                                <Image h="100%" w="100%" borderRadius="0.25rem" src='https://cdn.shopify.com/s/files/1/0906/2558/products/1_bf362c65-33b1-46ad-97d8-b94a35870aeb.jpg?v=1645631016' alt=''/>
                             </Box>
                             <Box w="70%">
                                 <Box fontSize="12px" fontWeight="550" color="#575555" textAlign="left" ml="5px" mt="5px">
@@ -99,7 +100,7 @@ export const Cart = () => {
                     <Flex p="0.5rem" w="100%"> 
                         <Flex h="100px" w="60%" >
                             <Box w="25%"  p="5px 15px">
-                                <Image h="100%" w="100%" borderRadius="0.25rem" src='https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-matte-as-hell-crayon-mini-lipstick-12-baby-houseman-28220228632659_584be809-56c3-4baf-b90b-8db9e95b2afe.jpg?v=1659698252' alt=''/>
+                                <Image h="100%" w="100%" borderRadius="0.25rem" src='https://cdn.shopify.com/s/files/1/0906/2558/products/GWP-1199-02.jpg?v=1659110535' alt=''/>
                             </Box>
                             <Box w="70%">
                                 <Box fontSize="12px" fontWeight="550" color="#575555" textAlign="left" ml="5px" mt="5px">
@@ -122,9 +123,13 @@ export const Cart = () => {
                 </Box>
             </Flex>
             {/* cart */}
-            <Text>cart</Text>
+            {/* <Text>cart</Text> */}
             <Flex w="100%"  backgroundColor="#fff" direction="column">
-                <SingleProduct setTotalprice={setTotalprice} totalprice={totalprice} />
+                {
+                    cartprods?.map((ele)=>(
+                        <SingleProduct key={ele.id} elm={ele} setTotalprice={setTotalprice} totalprice={totalprice} setCartProds={setCartProds} />
+                    ))
+                }
             </Flex>
         </Flex>
         <Flex w={["100%","100%","50%"]} direction="column" ml="1rem" mr="1rem"   >
@@ -166,11 +171,11 @@ export const Cart = () => {
                                     <Image w="15px" h="15px" src="https://in.sugarcosmetics.com/desc-images/CartSubtotal.svg" alt="" />
                                 </Box>    
                                 <Box>
-                                    Cart Sub Total:
+                                    Cart Sub Total: 
                                 </Box>
                             </Flex>
                             <Box>
-                                <Box>₹ 5999</Box>
+                                <Box>₹ {totalprice}.00</Box>
                             </Box>
                         </Flex>
                     </Box>
@@ -215,7 +220,7 @@ export const Cart = () => {
                                 </Box>
                             </Flex>
                             <Box w="30%" textAlign="right">
-                                <Box>₹ 399.00</Box>
+                                <Box>₹ {totalprice-100}.00</Box>
                             </Box>
                             <Box fontSize="10.5px" pr="1rem" pl="1rem">
                                 <Box>
@@ -227,8 +232,8 @@ export const Cart = () => {
                 </Box>
                 <Box pt="0.5rem" pb="0.5rem" mt="1rem" mb="1rem" w="100%">
                     <Flex w="100%">
-                        <Flex w="30%" border="1px solid #dee2eb" fontsize="13px">
-                            <Flex w="100%" pt="0.5rem" pr="1rem" pl="1rem">
+                        <Flex w="30%" border="1px solid #dee2eb" fontSize="13px">
+                            <Flex w="100%" pt="0.5rem" pr="1rem" pl="1rem" onClick={()=>navigate("/")}>
                                 <Box>
                                     <IoIosArrowBack/>
                                 </Box>
@@ -236,7 +241,7 @@ export const Cart = () => {
                             </Flex>
                         </Flex>
                         <Flex w="70%">
-                            <Button w="100%" fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" onClick={()=>navigate("/checkout")} >Delivery Information</Button>
+                            <Button w="100%" _hover={{backgroundColor:"#212529"}} fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" onClick={()=>navigate("/checkout")} >Delivery Information</Button>
                         </Flex>
                     </Flex>
                 </Box>
@@ -246,5 +251,6 @@ export const Cart = () => {
         </Flex>
       </Flex>
     </VStack>
+    </Box>
   );
 };

@@ -3,13 +3,62 @@ import { Box, VStack, Flex , Image,Text ,Button   } from "@chakra-ui/react";
 import { MdDelete } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
 import Addressform from "./AddressModal"
+import {SingleProduct} from "./Singlecartprod"
+import axios from "axios";
+import {useNavigate} from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux";
+
+
 
 export const Checkout = () => {
+    const { total } = useSelector((state) => state.cart);
+    const { currentUser } = useSelector((state) => state.user);
+    const navigate = useNavigate();
+    const [address,setAddress] = React.useState({})
+    const [isaddress,setadress] = React.useState(false)
+    const [totalprice,setTotalprice] = React.useState(100)
+    const [cartprods,setCartProds] = React.useState([])
 
     const handleclick=(data)=>{
+        let dataa={
+            ...data,
+            userId:currentUser._id
+        }
         console.log("formdata",data)
+        axios.post("http://localhost:8080/api/address",dataa)
+        .then((res)=>{
+            getaddress()
+            console.log("formdatares",res.data)
+        })
+        .catch((err)=>console.log(err))
       }
+
+      const getaddress =()=>{
+        axios.get(`http://localhost:8080/api/address/${currentUser._id}`)
+        .then((res)=>{
+            console.log("getaddress",res.data,currentUser._id)
+            setadress(true)
+            setAddress({...res.data})
+            console.log("lengthhhh",Object.keys(address).length,"isaddress",isaddress)
+        })
+        .catch((err)=>console.log("error is occured",err))
+      }
+      const getdata=()=>{
+        axios.get(`http://localhost:8080/api/cart/${currentUser._id}`)
+        .then((res)=>{
+            console.log("zzzzzzzzz",res.data)
+            setCartProds(res.data)
+        })
+    }
+      React.useEffect(()=>{
+        getdata()
+        getaddress()
+      },[])
+    //   React.useEffect(()=>{
+    //     getaddress()
+    //   },[])
   return (
+    <Box w="100%" pr="1rem" pl="1rem">
     <VStack w="100%" mt="1.5rem" pr="1rem" pl="1rem" borderRadius="20px" boxShadow='md' backgroundColor="#fff" >
       <Flex w="100%" direction={["column","column","row"]}>
         <Flex w={["100%","100%","50%"]} direction="column"  ml="1rem" mr="1rem">
@@ -35,7 +84,7 @@ export const Checkout = () => {
                                 </Box>
                             </Flex>
                             <Box>
-                                <Box>₹ 5999</Box>
+                                <Box>₹ {totalprice}.00</Box>
                             </Box>
                         </Flex>
                     </Box>
@@ -80,7 +129,7 @@ export const Checkout = () => {
                                 </Box>
                             </Flex>
                             <Box w="30%" textAlign="right">
-                                <Box>₹ 399.00</Box>
+                                <Box>₹ {totalprice-100}.00</Box>
                             </Box>
                             <Box fontSize="10.5px" pr="1rem" pl="1rem">
                                 <Box>
@@ -97,52 +146,15 @@ export const Checkout = () => {
                     </Box>
                     Order Summary
                 </Flex>
-                <Box textDecoration="underline">Cart Total : Rs. 2796.00</Box>
+                <Box textDecoration="underline">Cart Total : Rs. ₹ {totalprice-100}.00</Box>
             </Flex>
             {/* cart */}
             <Flex w="100%"  backgroundColor="#fff" direction="column">
-                <Flex mt="0.5rem"  w="100%" backgroundColor="#fff">
-                    <Box backgroundColor="#fff" h="110px" w="100%">
-                        <Flex p="0.5rem" w="100%"> 
-                            <Flex h="100px" w="60%" >
-                                <Box w="25%"  p="5px 15px">
-                                    <Image h="100%" w="100%" borderRadius="0.25rem" src='https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-matte-as-hell-crayon-mini-lipstick-12-baby-houseman-28220228632659_584be809-56c3-4baf-b90b-8db9e95b2afe.jpg?v=1659698252' alt=''/>
-                                </Box>
-                                <Box w="70%">
-                                    <Box fontSize="12px" fontWeight="550" color="#575555" textAlign="left" ml="5px" mt="5px">
-                                        <Text mb="2px">Matte As Hell Crayon Mini Lipstick - 12 Baby Houseman</Text>
-                                    </Box>
-                                    <Flex ml="5px" textAlign="left" fontSize="10px" fontWeight="500" color="#575555" gap="5px">
-                                        <Box>
-                                        <Image h="15px" w="15px" borderRadius="0.25rem" src='https://in.sugarcosmetics.com/desc-images/Wishlist.svg' alt=''/>
-                                        </Box>
-                                        <Box>Save to Wishlist</Box>
-                                    </Flex>
-                                </Box>
-                            </Flex>
-                            <Box w="40%" textAlign="right" mt="1.5rem" >               
-                                <Flex fontSize="12px"  gap="20px">
-                                        <Box  w="1em" h="1em" color="black" fontSize="16px" verticalAlign="middle"><MdDelete/></Box>
-                                        <Flex justifyContent="space-around" gap="5px">
-                                            <Box position="relative" borderRadius="50%" w="19px" h="19px" fontSize="18px" backgroundColor="black" color="white" >
-                                                <Box fontSize="13px" w="100%" h="100%" position="absolute" pb="7px" pr="7px">-</Box>
-                                            </Box>
-                                            <Box>3</Box>
-                                            <Box position="relative" borderRadius="50%" w="19px" h="19px" fontSize="18px" backgroundColor="black" color="white" >
-                                                <Box fontSize="13px" w="100%" h="100%" position="absolute" pb="7px" pr="7px">+</Box>
-                                            </Box>
-                                        </Flex>
-                                        <Flex>
-                                            <Text textDecoration="underline" fontWeight="400" >3</Text>
-                                            <Text>×</Text>
-                                            <Text textDecoration="line-through" >1599=</Text>
-                                            <Text color="#fc2779" >₹199</Text>
-                                        </Flex>
-                                </Flex>
-                            </Box>
-                        </Flex>
-                    </Box>
-                </Flex>
+                {
+                    cartprods?.map((ele)=>(
+                        <SingleProduct key={ele.id} elm={ele} setTotalprice={setTotalprice} totalprice={totalprice} setCartProds={setCartProds} />
+                    ))
+                }                
             </Flex>
         </Flex>
         <Flex w={["100%","100%","50%"]} direction="column" ml="1rem" mr="1rem"   >
@@ -152,7 +164,7 @@ export const Checkout = () => {
                     <Image src="	https://in.sugarcosmetics.com/desc-images/CustomerInformation.svg" alt="" verticalAlign="middle" w="20px" h="20px" /> <Box>Contact Information</Box> 
                 </Flex>
             </Flex>
-            <VStack backgroundColor="#faf9f9" borderRadius="10px" p="0.5rem" border="1px solid red" mt="5px">
+            <VStack backgroundColor="#faf9f9" borderRadius="10px" p="0.5rem"  mt="5px">
                 <Box w="100%" pr="0.5rem" pl="0.5rem">
                     <Flex w="100%" justifyContent="space-between" mt="0.25rem" mb="0.25rem">
                         <Flex>
@@ -181,17 +193,19 @@ export const Checkout = () => {
                 </Box>
                 {/* address */}
                 <Box w="100%" backgroundColor="#fff" borderRadius="0.25rem" pr="1rem" pl="1rem" mt="0.5rem" mr="0.25rem" ml="0.2.5rem" overflowX="hidden">
-                    <Box w="100%" fontSize="14px" fontWeight="450">
-                        <Text>Haroon Qureshi</Text>
-                        <Text>8055674750</Text>
-                        <Text>Nagpur</Text>
-                        <Text>Maharashtra India</Text>
-                    </Box>
+                    {
+                        address!=null ?  <Box w="100%" fontSize="14px" fontWeight="450">
+                        <Text>{address.firstname} {address.lastname}</Text>
+                        <Text>{address.phone}</Text>
+                        <Text>{address.city}</Text>
+                        <Text>{address.state}</Text>
+                        </Box> : <Text>Add Address To Proceed Further</Text>
+                    }
                 </Box>
                 <Box pt="0.5rem" pb="0.5rem" mt="1rem" mb="1rem" w="100%" >
                     <Flex w="100%">
-                        <Flex w="30%" border="1px solid #dee2eb" fontsize="13px">
-                            <Flex w="100%" pt="0.5rem" pr="1rem" pl="1rem">
+                        <Flex w="30%" border="1px solid #dee2eb" fontSize="13px">
+                            <Flex w="100%" pt="0.5rem" pr="1rem" pl="1rem" onClick={()=>navigate("/")}>
                                 <Box>
                                     <IoIosArrowBack/>
                                 </Box>
@@ -199,8 +213,15 @@ export const Checkout = () => {
                             </Flex>
                         </Flex>
                         <Flex w="70%">
-                            <Button w="100%" fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" >
-                                Proceed To Payment(399)
+                            <Button w="100%" _hover={{backgroundColor:"#212529"}} fontWeight="450" fontSize="13px" color="#fff" pt="0.5rem" pb="0.5rem" backgroundColor="#212529" onClick={()=>{
+                                if(address==null){
+                                    return alert("Please Provide a Address")
+                                }
+                                else{
+                                    navigate("/payment")
+                                }
+                                }} >
+                                Proceed To Payment(RS.{totalprice-100}.00)
                             </Button>
                         </Flex>
                     </Flex>
@@ -211,6 +232,7 @@ export const Checkout = () => {
         </Flex>
       </Flex>
     </VStack>
+    </Box>
   );
 };
 

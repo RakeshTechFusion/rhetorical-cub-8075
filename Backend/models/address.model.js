@@ -1,6 +1,6 @@
-const { Schema, model } = require("mongoose");
+const mongoose = require("mongoose");
 
-const addressSchema = new Schema({
+const addressSchema = mongoose.Schema({
   user: { type: String, required: true },
   firstname: { type: String, required: true },
   lastname: { type: String, required: true },
@@ -12,5 +12,5 @@ const addressSchema = new Schema({
   city: { type: String, required: true },
 });
 
-const Address = model("address", addressSchema);
+const Address = mongoose.model("address", addressSchema);
 module.exports = Address;
