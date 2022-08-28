@@ -26,8 +26,8 @@ export const SingleProduct = ({
       });
   };
   useEffect(() => {
-    const getProducts = () => {
-      axios
+    const getProducts = async () => {
+      await axios
         .get(`http://localhost:8080/api/products/${elm.productId}`)
         .then((res) => {
           setprod({ ...res.data });
@@ -40,8 +40,8 @@ export const SingleProduct = ({
     getProducts();
   }, []);
 
-  const deleteprod = () => {
-    axios
+  const deleteprod = async () => {
+    await axios
       .delete(`http://localhost:8080/api/cart/${elm._id}`)
       .then((res) => {
         setTotalprice((state) => state - price * qty);
@@ -52,12 +52,12 @@ export const SingleProduct = ({
       .catch((err) => toast.error("Something went wrong"));
   };
 
-  const handleqty = (act) => {
+  const handleqty = async (act) => {
     if (act == "dec" && qty == 1) {
       return toast.warning("Cannot Reduce Quantity");
     }
 
-    axios
+    await axios
       .put(`http://localhost:8080/api/cart/${act}/${elm._id}`)
       .then((res) => {
         if (act == "inc") {
