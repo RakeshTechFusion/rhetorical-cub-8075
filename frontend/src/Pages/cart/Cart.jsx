@@ -62,7 +62,7 @@ export const Cart = () => {
                 Order Summary
               </Flex>
               <Box textDecoration="underline" fontSize="1rem">
-                Cart Total : RS. {totalprice / - 100}.00
+                Cart Total : RS. {totalprice - 100}.00
               </Box>
             </Flex>
             <Flex mt="0.5rem" w="100%">

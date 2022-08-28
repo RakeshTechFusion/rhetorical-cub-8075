@@ -35,7 +35,9 @@ export const SingleProduct = ({
           setTotalprice((state) => state + res.data.Price * elm.quantity);
           dispatch(totalpricee(totalprice));
           setqty(elm.quantity);
-        });
+        })
+        .then(()=>console.log("totalprice",totalprice,"elm.productId",elm.productId,"qty",elm.quantity));
+
     };
     getProducts();
   }, []);
@@ -61,11 +63,11 @@ export const SingleProduct = ({
       .put(`http://localhost:8080/api/cart/${act}/${elm._id}`)
       .then((res) => {
         if (act == "inc") {
-          setTotalprice((state) => state + price);
+          setTotalprice((state) => state + (price));
           setqty((state) => state + 1);
           toast.success("Product Quantity Increased");
         } else {
-          setTotalprice((state) => state - price);
+          setTotalprice((state) => state - (price));
           setqty((state) => state - 1);
           toast.success("Product Quantity Decreased");
         }
@@ -128,7 +130,7 @@ export const SingleProduct = ({
                 fontSize="16px"
                 verticalAlign="middle"
               >
-                <MdDelete onClick={() => deleteprod()} />
+                <MdDelete />
               </Box>
               <Flex justifyContent="space-around" gap="5px">
                 <Box
