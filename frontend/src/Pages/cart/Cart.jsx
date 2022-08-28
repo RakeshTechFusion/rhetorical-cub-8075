@@ -13,18 +13,17 @@ export const Cart = () => {
   const [cartprods, setCartProds] = React.useState([]);
   const { currentUser } = useSelector((state) => state.user);
 
-  const getdata = () => {
-    axios
+  const getdata = async () => {
+    await axios
       .get(`http://localhost:8080/api/cart/${currentUser._id}`)
       .then((res) => {
-        console.log("zzzzzzzzz", res.data, "****", currentUser._id);
         setCartProds(res.data);
       });
   };
 
   React.useEffect(() => {
     getdata();
-  }, [setCartProds]);
+  }, []);
   // currentUser._id
 
   return (
@@ -63,7 +62,7 @@ export const Cart = () => {
                 Order Summary
               </Flex>
               <Box textDecoration="underline" fontSize="1rem">
-                Cart Total : RS. {totalprice - 100}.00
+                Cart Total : RS. {totalprice / - 100}.00
               </Box>
             </Flex>
             <Flex mt="0.5rem" w="100%">
