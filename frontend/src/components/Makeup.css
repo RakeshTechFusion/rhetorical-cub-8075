@@ -11,10 +11,36 @@
    width: 100%;
    height: 35vh; 
    margin-bottom: 2%;
+   /* background-image:url('https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   filter: blur(8px);
+  -webkit-filter: blur(8px); */
+  /* background:url('https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(8px);
+ -webkit-filter: blur(8px); ; */
 }
+ img.background {
+    width: 100%;
+    height: 35vh; 
+    
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(45px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+    }
+
 .banner>img{
     width: 85%;
     height: 100%;
+    /* z-index: 100; */
+    margin: auto;
     
 }
 #mapData {
