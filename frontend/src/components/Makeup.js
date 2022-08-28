@@ -33,8 +33,6 @@ export default function Makeup(){
       getData()
     }, [])
 
-
-
     const handleaddCart = (el) => {
       axios.post(`http://localhost:8080/api/cart`, {
         userId: uid,
@@ -69,8 +67,11 @@ export default function Makeup(){
 
 return (
   <div className='makeupCont'>
+    <div>
+    <img className="background" src='https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg'alt="Aleq"></img>
     <div className='banner'>
             <img src='https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg' alt='banner' />
+        </div>
         </div>
 
 
