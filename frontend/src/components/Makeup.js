@@ -54,6 +54,7 @@ export default function Makeup(){
 
 
 
+
 const handleaddCart = (e) => {
   
   // axios.post(`https://sugar-cosmeticsapi.herokuapp.com/cart`, {
@@ -82,6 +83,7 @@ return (
     <div className='banner'>
             <img src='https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg' alt='banner' />
         </div>
+
 
 
 <div className='afterbanner' style={{display:"flex", justifyContent:"space-between"}}>
@@ -183,12 +185,3 @@ return (
       </div>
     )
   }
-
-
-
-
-
-  
-
-
-  

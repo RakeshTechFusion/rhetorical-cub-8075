@@ -1,20 +1,36 @@
-import { legacy_createStore,applyMiddleware, compose} from "redux";
-import thunk from "redux-thunk"
-import {CartReducer} from "./reducer"
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import cartReducer from "./cartReducer";
+import userReducer from "./userReducer";
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
-const composeEnhancers =
-  typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-        // Specify extension’s options like name, actionsDenylist, actionsCreators, serialize...
-      })
-    : compose;
+const persistConfig = {
+  key: "root",
+  version: 1,
+  storage,
+};
 
-    const enhancer = composeEnhancers(
-        applyMiddleware(thunk)
-        // other store enhancers if any
-      );
+const rootReducer = combineReducers({ user: userReducer, cart: cartReducer });
 
-export const store = legacy_createStore(
-    CartReducer,
-    enhancer
-)
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export const store = configureStore({
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+});
+
+export let persistor = persistStore(store);

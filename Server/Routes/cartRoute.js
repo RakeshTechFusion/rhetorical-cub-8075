@@ -5,12 +5,12 @@ import {
   postToCart,
   decrementQty,
   deleteProduct,
-} from "../Controllers/cartController";
+} from "../Controllers/cartController.js";
 const router = Router();
 
 router.get("/:id", getCartData);
 router.post("/", postToCart);
-router.put("/:id/inc", incrementQty);
-router.put("/:id/dec", decrementQty);
-router.put("/:id", deleteProduct);
+router.put("/inc/:id", incrementQty);
+router.put("/dec/:id", decrementQty);
+router.delete("/:id", deleteProduct);
 export default router;

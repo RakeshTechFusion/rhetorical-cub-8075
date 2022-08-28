@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
+
 const cartSchema = mongoose.Schema(
   {
+
       product: {
           type: mongoose.Schema.Types.ObjectId,
           ref: "makeup",
