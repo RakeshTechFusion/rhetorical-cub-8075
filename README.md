@@ -4,17 +4,14 @@ This collaborative project is a clone of the [SugarCosmetics](https://sugarcosme
 
 SUGAR Cosmetics is a cruelty-free makeup brand that is high on style and higher on performance. The brand is inspired by and targeted towards bold, independent women who refuse to be stereotyped into roles.
 
-## Deployed Site :- https://sugarcosmeticnem201.netlify.app/
+## Deployed Site
 
-[SugarCosmetics Clone]()
+[SugarCosmetics Clone](https://sugarcosmeticnem201.netlify.app/)
 
 ### Presentation
 
-[Presentation Video]()
+[Presentation Video](https://drive.google.com/file/d/1y6T2wkl-xWzEMbch7AIP4pWUFPqsjnol/view?usp=sharing)
 
-### Blog
-
-[SugarCosmetics Clone Blog]()
 
 ### `Tech Stack Used in FrontEnd`
 
