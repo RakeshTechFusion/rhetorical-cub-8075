@@ -39,7 +39,7 @@ SUGAR Cosmetics is a cruelty-free makeup brand that is high on style and higher 
 
 - **Landing Page**
 
-![Landing Page](./Website%20Sneak%20Peeks/Landing%20Page%201.png?raw=true)
+![Landing Page](./Website%20Sneak%20Peeks/LandingPage.png?raw=true)
 
 - **Login Page**
 
