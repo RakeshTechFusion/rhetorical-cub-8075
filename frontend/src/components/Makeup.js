@@ -4,7 +4,12 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import './Makeup.css';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
+import Star from './Rating'
+import Rating from 'react-rating'
+
+
+
 // import { Link } from 'react-router-dom';
 export default function Makeup(){
     const [data, setData] = useState([])
@@ -73,6 +78,7 @@ return (
             <img src='https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg' alt='banner' />
         </div>
         </div>
+        
 
 
 
@@ -149,12 +155,14 @@ return (
                             </p>
 
                             <p>
-                            <img
-                                id="mapDataStar"
-                                src="https://img.freepik.com/free-vector/golden-star-3d_1053-79.jpg?w=740&t=st=1655214227~exp=1655214827~hmac=02adf4c8e90961a6603d966c85d2c548b79d9f0c1f8593787d3a3f478999dd1f"
-                                alt="Star"
-                            />
-                            {elem.Rating} {elem.RatingTotal}
+                            <Rating
+                            emptySymbol="far fa-star fa-0.5x"
+                            fullSymbol="fa fa-star fa-0.5x"
+                            initialRating={elem.Rating}
+                            
+                            readonly={true}
+                          />
+                             {elem.RatingTotal}
                             </p>
 
                             <div id="prodDataHover">
